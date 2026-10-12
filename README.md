@@ -11,7 +11,7 @@ Kleurpallet: [Coolors](https://coolors.co/519e8a-7eb09b-ef233c-1e2d2f-041f1e)
 - #041F1E
 
 ## stappenplan: 
-https://docs.google.com/document/d/11_weD30IZm6McqYDyb1D1oduWGI0AajYIX2uFs1_us4/edit?usp=sharing
+https://docs.google.com/document/d/1K3LdQ2Ji8j6VzxZHNlT2K8Loyd1dlt7Jp5zzhTUX94w/edit?usp=sharing
 
 ## wireframes: 
 https://docs.google.com/document/d/1iG0i2G2nVTQPeCN8NLERQfjRdCeWmiIe98A6KkQCVWs/edit?usp=sharing
