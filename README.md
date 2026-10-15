@@ -1,7 +1,7 @@
 # GSP
 Workout Tracker
 
-NAAM: FitTrack
+NAAM: FitForge
 
 Kleurpallet: [Coolors](https://coolors.co/519e8a-7eb09b-ef233c-1e2d2f-041f1e)
 - #519E8A
