@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 256" width="340" height="256" role="img" aria-label="FitTrack logo">
+  <title>FitTrack</title>
+
+  <!-- transparent background: no background rect -->
+
+  <!-- bars -->
+  <rect x="118" y="146" width="31" height="36" rx="7" fill="#DDA15E"/>
+  <rect x="156" y="118" width="31" height="64" rx="7" fill="#606C38"/>
+  <rect x="194" y="84"  width="34" height="98" rx="8" fill="#283618"/>
+
+  <!-- baseline -->
+  <line x1="102" y1="182" x2="238" y2="182" stroke="#283618" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- sprout -->
+  <g>
+    <line x1="211" y1="86" x2="211" y2="46" stroke="#4F6B2A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M211 66 C196 66 185 56 185 43 C200 43 210 53 211 66 Z" fill="#4F6B2A"/>
+    <path d="M211 54 C214 41 227 32 242 32 C242 45 229 54 211 54 Z" fill="#DDA15E"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="170" y="232" text-anchor="middle"
+        font-family="Montserrat, 'Arial Black', Helvetica, Arial, sans-serif"
+        font-size="33" font-weight="800" letter-spacing="4.5" fill="#283618">FITTRACK</text>
+</svg>

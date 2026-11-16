@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine bewerken - FitTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="index.html"><img src="img/fittrack-logo.svg" alt="FitTrack logo" class="logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="routines.html" class="actief">Workout</a>
+            <a href="voeding.html">Voeding</a>
+            <a href="voortgang.html">Voortgang</a>
+            <a href="profiel.html">Profiel</a>
+        </nav>
+        <a href="profiel.html" class="profielknop"><i class="fa-solid fa-user"></i></a>
+    </header>
+
+    <div class="titel">
+        <h1>Routine bewerken</h1>
+        <p>Pas je routine aan en sla op</p>
+    </div>
+
+    <div class="inhoud">
+        <form class="kaart" action="routines.html" method="post" style="max-width: 760px; margin: 0 auto">
+
+            <div class="veld">
+                <label for="routinenaam">Naam van de routine <span class="verplicht">*</span></label>
+                <input type="text" id="routinenaam" name="naam" class="invoer" value="Bovenlichaam kracht" required>
+            </div>
+
+            <p class="kopje">Welke dagen?</p>
+            <div class="dagen">
+                <input type="checkbox" id="dagma" name="dagen[]" value="Ma" class="dagvinkje" checked><label for="dagma"
+                    class="dagknop">Ma</label>
+                <input type="checkbox" id="dagdi" name="dagen[]" value="Di" class="dagvinkje"><label for="dagdi"
+                    class="dagknop">Di</label>
+                <input type="checkbox" id="dagwo" name="dagen[]" value="Wo" class="dagvinkje"><label for="dagwo"
+                    class="dagknop">Wo</label>
+                <input type="checkbox" id="dagdo" name="dagen[]" value="Do" class="dagvinkje" checked><label for="dagdo"
+                    class="dagknop">Do</label>
+                <input type="checkbox" id="dagvr" name="dagen[]" value="Vr" class="dagvinkje"><label for="dagvr"
+                    class="dagknop">Vr</label>
+                <input type="checkbox" id="dagza" name="dagen[]" value="Za" class="dagvinkje"><label for="dagza"
+                    class="dagknop">Za</label>
+                <input type="checkbox" id="dagzo" name="dagen[]" value="Zo" class="dagvinkje"><label for="dagzo"
+                    class="dagknop">Zo</label>
+            </div>
+
+            <p class="kopje">Oefeningen</p>
+            <div class="routineoefening">
+                <span class="nummer">1</span>
+                <strong>Bankdrukken</strong>
+                <label for="sets1" class="kleintekst">Sets</label>
+                <input type="number" id="sets1" name="sets[]" class="kleinvak" value="4">
+                <label for="reps1" class="kleintekst">Reps</label>
+                <input type="number" id="reps1" name="reps[]" class="kleinvak" value="8">
+            </div>
+            <div class="routineoefening">
+                <span class="nummer">2</span>
+                <strong>Dumbbell press</strong>
+                <label for="sets2" class="kleintekst">Sets</label>
+                <input type="number" id="sets2" name="sets[]" class="kleinvak" value="3">
+                <label for="reps2" class="kleintekst">Reps</label>
+                <input type="number" id="reps2" name="reps[]" class="kleinvak" value="10">
+            </div>
+            <div class="routineoefening">
+                <span class="nummer">3</span>
+                <strong>Schouderpress</strong>
+                <label for="sets3" class="kleintekst">Sets</label>
+                <input type="number" id="sets3" name="sets[]" class="kleinvak" value="3">
+                <label for="reps3" class="kleintekst">Reps</label>
+                <input type="number" id="reps3" name="reps[]" class="kleinvak" value="10">
+            </div>
+            <div class="routineoefening">
+                <span class="nummer">4</span>
+                <strong>Lat pulldown</strong>
+                <label for="sets4" class="kleintekst">Sets</label>
+                <input type="number" id="sets4" name="sets[]" class="kleinvak" value="3">
+                <label for="reps4" class="kleintekst">Reps</label>
+                <input type="number" id="reps4" name="reps[]" class="kleinvak" value="10">
+            </div>
+            <div class="routineoefening">
+                <span class="nummer">5</span>
+                <strong>Roeien aan kabel</strong>
+                <label for="sets5" class="kleintekst">Sets</label>
+                <input type="number" id="sets5" name="sets[]" class="kleinvak" value="3">
+                <label for="reps5" class="kleintekst">Reps</label>
+                <input type="number" id="reps5" name="reps[]" class="kleinvak" value="10">
+            </div>
+            <div class="routineoefening">
+                <span class="nummer">6</span>
+                <strong>Triceps pushdown</strong>
+                <label for="sets6" class="kleintekst">Sets</label>
+                <input type="number" id="sets6" name="sets[]" class="kleinvak" value="3">
+                <label for="reps6" class="kleintekst">Reps</label>
+                <input type="number" id="reps6" name="reps[]" class="kleinvak" value="12">
+            </div>
+
+            <label for="nieuweoefening" class="kleintekst"><b>Oefening toevoegen</b></label>
+            <div class="naastelkaar">
+                <select id="nieuweoefening" name="nieuweoefening" class="invoer">
+                    <option value="">Kies een oefening</option>
+                    <option>Squat</option>
+                    <option>Optrekken</option>
+                    <option>Plank</option>
+                    <option>Biceps curl</option>
+                    <option>Opdrukken</option>
+                </select>
+                <button type="submit" class="knop knopwit">+ Toevoegen</button>
+            </div>
+
+            <br>
+            <label class="keuze"><input type="checkbox" name="overload" checked>Progressieve overload (gewicht
+                automatisch verhogen)</label>
+
+            <p class="kleintekst"><span class="verplicht">*</span> = verplicht veld</p>
+            <br>
+            <div class="naastelkaar">
+                <a href="routines.html" class="knop knopwit">Annuleren</a>
+                <button type="submit" class="knop knoprood" style="flex: 1">Routine opslaan</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>© 2026 FitTrack</p>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+    </footer>
+
+    <!-- menu onderaan voor gsm -->
+    <div class="menuonder">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="routines.html" class="actief"><i class="fa-solid fa-dumbbell"></i>Workout</a>
+        <a href="voeding.html"><i class="fa-solid fa-utensils"></i>Voeding</a>
+        <a href="voortgang.html"><i class="fa-solid fa-chart-line"></i>Voortgang</a>
+        <a href="profiel.html"><i class="fa-solid fa-user"></i>Profiel</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

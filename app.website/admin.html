@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiel bewerken - FitTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="index.html"><img src="img/fittrack-logo.svg" alt="FitTrack logo" class="logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="routines.html">Workout</a>
+            <a href="voeding.html">Voeding</a>
+            <a href="voortgang.html">Voortgang</a>
+            <a href="profiel.html" class="actief">Profiel</a>
+        </nav>
+        <a href="profiel.html" class="profielknop"><i class="fa-solid fa-user"></i></a>
+    </header>
+
+    <div class="titel">
+        <h1>Profiel bewerken</h1>
+        <p>Pas je gegevens en voorkeuren aan</p>
+    </div>
+
+    <div class="inhoud onderelkaar" style="max-width: 760px">
+
+        <a href="profiel.html"><i class="fa-solid fa-arrow-left"></i> Terug naar profiel</a>
+
+        <div class="filters">
+            <a href="#gegevens" class="filter">Gegevens</a>
+            <a href="#wachtwoord" class="filter">Wachtwoord</a>
+            <a href="#coach" class="filter">Coach</a>
+            <a href="#doel" class="filter">Doel</a>
+            <a href="#niveau" class="filter">Niveau</a>
+            <a href="#apparatuur" class="filter">Apparatuur</a>
+            <a href="#eenheden" class="filter">Eenheden</a>
+            <a href="#taal" class="filter">Taal</a>
+            <a href="#koppelingen" class="filter">Koppelingen</a>
+        </div>
+
+        <!-- persoonlijke gegevens -->
+        <div class="kaart" id="gegevens">
+            <h2>Persoonlijke gegevens</h2>
+            <form action="profiel.html" method="post">
+                <div class="veld">
+                    <label for="naam">Naam <span class="verplicht">*</span></label>
+                    <input type="text" id="naam" name="naam" class="invoer" value="Naam Achternaam" required>
+                </div>
+                <div class="veld">
+                    <label for="geboortedatum">Geboortedatum <span class="verplicht">*</span></label>
+                    <input type="date" id="geboortedatum" name="geboortedatum" class="invoer" value="2000-01-01"
+                        required>
+                </div>
+                <div class="veld">
+                    <label for="lengte">Lengte (cm) <span class="verplicht">*</span></label>
+                    <input type="number" id="lengte" name="lengte" class="invoer" value="180" required>
+                </div>
+                <div class="veld">
+                    <label for="gewicht">Gewicht (kg) <span class="verplicht">*</span></label>
+                    <input type="number" id="gewicht" name="gewicht" class="invoer" value="81.4" required step="0.1">
+                </div>
+                <button type="submit" class="knop knopgroen">Opslaan</button>
+            </form>
+        </div>
+
+        <!-- wachtwoord en beveiliging -->
+        <div class="kaart" id="wachtwoord">
+            <h2>Wachtwoord &amp; beveiliging</h2>
+            <form action="profiel.html" method="post">
+                <div class="veld">
+                    <label for="email">E-mailadres <span class="verplicht">*</span></label>
+                    <input type="email" id="email" name="email" class="invoer" value="naam@email.com" required>
+                </div>
+                <div class="veld">
+                    <label for="huidig">Huidig wachtwoord <span class="verplicht">*</span></label>
+                    <input type="password" id="huidig" name="huidig" class="invoer" required>
+                </div>
+                <div class="veld">
+                    <label for="nieuw">Nieuw wachtwoord <span class="verplicht">*</span></label>
+                    <input type="password" id="nieuw" name="nieuw" class="invoer" required minlength="8">
+                </div>
+                <div class="veld">
+                    <label for="herhaal">Herhaal nieuw wachtwoord <span class="verplicht">*</span></label>
+                    <input type="password" id="herhaal" name="herhaal" class="invoer" required>
+                </div>
+                <label class="keuze"><input type="checkbox" name="tweestaps">2-stapverificatie aanzetten</label>
+                <button type="submit" class="knop knopgroen">Opslaan</button>
+            </form>
+        </div>
+
+
+        <!-- gezins- / coachaccount -->
+        <div class="kaart" id="coach">
+            <h2>Gezins- / coachaccount</h2>
+            <form action="profiel.html" method="post">
+                <p class="kleintekst veld">Nodig een gezinslid of je coach uit. Die krijgt een e-mail met een link.</p>
+                <div class="veld">
+                    <label for="coachmail">E-mailadres <span class="verplicht">*</span></label>
+                    <input type="email" id="coachmail" name="coachmail" class="invoer" required>
+                </div>
+                <div class="veld">
+                    <label for="rol">Rol</label>
+                    <select id="rol" name="rol" class="invoer">
+                        <option>Coach</option>
+                        <option>Gezinslid</option>
+                    </select>
+                </div>
+                <button type="submit" class="knop knopgroen">Uitnodiging versturen</button>
+            </form>
+        </div>
+
+        <!-- fitnessdoel -->
+        <div class="kaart" id="doel">
+            <h2>Fitnessdoel</h2>
+            <form action="profiel.html" method="post">
+                <label class="keuze"><input type="radio" name="doel" value="Afvallen" checked>Afvallen</label>
+                <label class="keuze"><input type="radio" name="doel" value="Spiermassa opbouwen">Spiermassa
+                    opbouwen</label>
+                <label class="keuze"><input type="radio" name="doel" value="Sterker worden">Sterker worden</label>
+                <label class="keuze"><input type="radio" name="doel" value="Fit blijven">Fit blijven</label>
+                <div class="veld">
+                    <label for="doelkg">Hoeveel kg?</label>
+                    <input type="number" id="doelkg" name="doelkg" class="invoer" value="3">
+                </div>
+                <button type="submit" class="knop knopgroen">Opslaan</button>
+            </form>
+        </div>
+
+        <!-- ervaringsniveau -->
+        <div class="kaart" id="niveau">
+            <h2>Ervaringsniveau</h2>
+            <form action="profiel.html" method="post">
+                <label class="keuze"><input type="radio" name="niveau" value="Beginner">Beginner</label>
+                <label class="keuze"><input type="radio" name="niveau" value="Gemiddeld" checked>Gemiddeld</label>
+                <label class="keuze"><input type="radio" name="niveau" value="Gevorderd">Gevorderd</label>
+                <button type="submit" class="knop knopgroen">Opslaan</button>
+            </form>
+        </div>
+
+        <!-- apparatuur -->
+        <div class="kaart" id="apparatuur">
+            <h2>Apparatuur</h2>
+            <form action="profiel.html" method="post">
+                <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Barbell" checked>Barbell</label>
+                <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Dumbbells"
+                        checked>Dumbbells</label>
+                <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Kabelmachine"
+                        checked>Kabelmachine</label>
+                <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Fitnessmachines"
+                        checked>Fitnessmachines</label>
+                <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Optrekstang"
+                        checked>Optrekstang</label>
+                <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Kettlebell"
+                        checked>Kettlebell</label>
+                <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Bank" checked>Bank</label>
+                <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Weerstandsbanden"
+                        checked>Weerstandsbanden</label>
+                <div class="veld">
+                    <label for="gym">Mijn gym</label>
+                    <input type="text" id="gym" name="gym" class="invoer" value="Basic-Fit Beveren">
+                </div>
+                <button type="submit" class="knop knopgroen">Opslaan</button>
+            </form>
+        </div>
+
+        <!-- eenheden -->
+        <div class="kaart" id="eenheden">
+            <h2>Eenheden</h2>
+            <form action="profiel.html" method="post">
+                <div class="veld">
+                    <label for="gewichteenheid">Gewicht</label>
+                    <select id="gewichteenheid" name="gewichteenheid" class="invoer">
+                        <option>kg</option>
+                        <option>lbs</option>
+                    </select>
+                </div>
+                <div class="veld">
+                    <label for="lengteeenheid">Lengte</label>
+                    <select id="lengteeenheid" name="lengteeenheid" class="invoer">
+                        <option>cm</option>
+                        <option>inch</option>
+                    </select>
+                </div>
+                <div class="veld">
+                    <label for="energie">Energie</label>
+                    <select id="energie" name="energie" class="invoer">
+                        <option>kcal</option>
+                        <option>kJ</option>
+                    </select>
+                </div>
+                <button type="submit" class="knop knopgroen">Opslaan</button>
+            </form>
+        </div>
+
+        <!-- taal -->
+        <div class="kaart" id="taal">
+            <h2>Taal</h2>
+            <form action="profiel.html" method="post">
+                <div class="veld">
+                    <label for="taalkeuze">Taal van de app</label>
+                    <select id="taalkeuze" name="taalkeuze" class="invoer">
+                        <option>Nederlands</option>
+                        <option>Frans</option>
+                        <option>Engels</option>
+                    </select>
+                </div>
+                <button type="submit" class="knop knopgroen">Opslaan</button>
+            </form>
+        </div>
+
+        <!-- koppelingen -->
+        <div class="kaart" id="koppelingen">
+            <h2>Koppelingen</h2>
+            <form action="profiel.html" method="post">
+                <p class="kleintekst veld">Kies welke apps en toestellen gegevens mogen delen met FitTrack.</p>
+                <label class="keuze"><input type="checkbox" name="koppeling[]" value="health" checked>Apple Health /
+                    Health Connect</label>
+                <label class="keuze"><input type="checkbox" name="koppeling[]" value="smartwatch">Smartwatch</label>
+                <p class="kopje">Wearable-instellingen</p>
+                <label class="keuze"><input type="checkbox" name="wearable[]" value="sync" checked>Automatisch
+                    synchroniseren</label>
+                <label class="keuze"><input type="checkbox" name="wearable[]" value="hartslag" checked>Hartslagzones
+                    gebruiken</label>
+                <label class="keuze"><input type="checkbox" name="wearable[]" value="meldingen">Meldingen op
+                    horloge</label>
+                <button type="submit" class="knop knopgroen">Opslaan</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>© 2026 FitTrack</p>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+    </footer>
+
+    <!-- menu onderaan voor gsm -->
+    <div class="menuonder">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="routines.html"><i class="fa-solid fa-dumbbell"></i>Workout</a>
+        <a href="voeding.html"><i class="fa-solid fa-utensils"></i>Voeding</a>
+        <a href="voortgang.html"><i class="fa-solid fa-chart-line"></i>Voortgang</a>
+        <a href="profiel.html" class="actief"><i class="fa-solid fa-user"></i>Profiel</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

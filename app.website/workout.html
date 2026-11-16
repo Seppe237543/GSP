@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout - FitTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="workoutpagina">
+
+    <!-- bovenkant -->
+    <div class="workoutboven">
+        <a href="#pauze" class="donkereknop"><i class="fa-solid fa-pause"></i></a>
+        <div>
+            <h3 id="oefeningnummer">Oefening 1 van 6</h3>
+            <p>12:34 · 1/19 sets · <i class="fa-solid fa-check"></i> Opgeslagen</p>
+        </div>
+        <a href="#stoppen" class="stopknop">Beëindigen</a>
+    </div>
+
+    <div class="inhoud">
+        <div class="kolommen2 workoutkolommen" style="gap: 28px">
+
+            <!-- de oefening -->
+            <div>
+                <div class="workoutfoto">Foto / video van de oefening</div>
+                <h1 id="oefeningnaam">Bankdrukken</h1>
+                <p class="minttekst"><span id="oefeninginfo">Borst · triceps</span> · doel 4 x 8</p>
+            </div>
+
+            <!-- sets, rust en invullen -->
+            <div class="onderelkaar">
+
+                <div class="kolommen4">
+                    <div class="set setklaar" id="set1"><i class="fa-solid fa-check"></i><small>60 x 8</small></div>
+                    <div class="set setnu" id="set2">2<small>60 x 8</small></div>
+                    <div class="set" id="set3">3<small>60 x 8</small></div>
+                    <div class="set" id="set4">4<small>60 x 8</small></div>
+                </div>
+
+                <div class="rust">
+                    <p class="rusttijd" id="rusttijd">0:58</p>
+                    <div>
+                        <h3>Rust</h3>
+                        <div class="naastelkaar">
+                            <button onclick="rustErbij()">+15 s</button>
+                            <button onclick="rustOverslaan()">Overslaan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="donkervak">
+                    <h3 class="minttekst" id="settitel">Set 2 van 4</h3>
+                    <br>
+                    <div class="kolommen2">
+                        <div>
+                            <label for="gewicht">Gewicht (kg)</label>
+                            <input type="number" id="gewicht" class="grootvak" value="60">
+                            <div class="naastelkaar">
+                                <button class="plusmin" onclick="veranderGetal('gewicht', -2.5)">−</button>
+                                <button class="plusmin" onclick="veranderGetal('gewicht', 2.5)">+</button>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="herhalingen">Herhalingen</label>
+                            <input type="number" id="herhalingen" class="grootvak" value="8">
+                            <div class="naastelkaar">
+                                <button class="plusmin" onclick="veranderGetal('herhalingen', -1)">−</button>
+                                <button class="plusmin" onclick="veranderGetal('herhalingen', 1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- onderkant -->
+    <div class="workoutonder">
+        <button class="donkereknop" onclick="vorigeOefening()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="knop knoprood" onclick="setVoltooien()">Set voltooien</button>
+        <button class="donkereknop" onclick="volgendeOefening()"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- popup pauze -->
+    <div class="popup" id="pauze">
+        <div class="popupvak popupgroen">
+            <h2>Gepauzeerd</h2>
+            <p>Je gegevens zijn opgeslagen.</p>
+            <br>
+            <div class="naastelkaar">
+                <a href="#" class="knop knopgroen">Hervatten</a>
+                <a href="#stoppen" class="knop knoproodrand">Beëindigen</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup stoppen -->
+    <div class="popup" id="stoppen">
+        <div class="popupvak">
+            <h2>Workout beëindigen?</h2>
+            <p>Je voortgang wordt opgeslagen.</p>
+            <br>
+            <div class="naastelkaar">
+                <a href="#" class="knop knopwit">Doorgaan</a>
+                <a href="index.html" class="knop knoprood">Opslaan en stoppen</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

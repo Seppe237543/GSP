@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voeding toevoegen - FitTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="index.html"><img src="img/fittrack-logo.svg" alt="FitTrack logo" class="logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="routines.html">Workout</a>
+            <a href="voeding.html" class="actief">Voeding</a>
+            <a href="voortgang.html">Voortgang</a>
+            <a href="profiel.html">Profiel</a>
+        </nav>
+        <a href="profiel.html" class="profielknop"><i class="fa-solid fa-user"></i></a>
+    </header>
+
+    <div class="titel">
+        <h1>Voeding toevoegen</h1>
+    </div>
+
+    <div class="inhoud">
+        <form class="kaart" action="voeding.html" method="post" style="max-width: 640px; margin: 0 auto">
+
+            <p class="kopje" style="margin-top: 0">Bij welke maaltijd?</p>
+            <div class="filters">
+                <input type="radio" name="maaltijd" id="ontbijt" value="Ontbijt" class="filterkeuze"><label
+                    for="ontbijt" class="filter">Ontbijt</label>
+                <input type="radio" name="maaltijd" id="lunch" value="Lunch" class="filterkeuze"><label for="lunch"
+                    class="filter">Lunch</label>
+                <input type="radio" name="maaltijd" id="diner" value="Diner" class="filterkeuze"><label for="diner"
+                    class="filter">Diner</label>
+                <input type="radio" name="maaltijd" id="snacks" value="Snacks" class="filterkeuze" checked><label
+                    for="snacks" class="filter">Snacks</label>
+            </div>
+            <br>
+
+            <div class="veld">
+                <label for="zoeketen">Zoek voeding</label>
+                <input type="search" id="zoeketen" name="zoeken" class="zoekbalk" placeholder="Bv. banaan">
+            </div>
+
+            <p class="meldingopgelet" id="scan"><i class="fa-solid fa-barcode"></i> Barcode scannen komt later. Zoek
+                voorlopig op naam.</p>
+
+            <p class="kopje">Kies je voeding</p>
+            <label class="keuze uiteen" for="eten1">
+                <span><input type="radio" name="eten" id="eten1" value="Havermout">Havermout <span class="kleintekst">·
+                        1 kom (60 g)</span></span>
+                <b>350 kcal</b>
+            </label>
+            <label class="keuze uiteen" for="eten2">
+                <span><input type="radio" name="eten" id="eten2" value="Banaan">Banaan <span class="kleintekst">· 1 stuk
+                        (120 g)</span></span>
+                <b>100 kcal</b>
+            </label>
+            <label class="keuze uiteen" for="eten3">
+                <span><input type="radio" name="eten" id="eten3" value="Kip met rijst">Kip met rijst <span
+                        class="kleintekst">· 1 portie (400 g)</span></span>
+                <b>550 kcal</b>
+            </label>
+            <label class="keuze uiteen" for="eten4">
+                <span><input type="radio" name="eten" id="eten4" value="Griekse yoghurt">Griekse yoghurt <span
+                        class="kleintekst">· 1 bakje (170 g)</span></span>
+                <b>140 kcal</b>
+            </label>
+            <label class="keuze uiteen" for="eten5">
+                <span><input type="radio" name="eten" id="eten5" value="Kwark met noten" checked>Kwark met noten <span
+                        class="kleintekst">· 1 portie (200 g)</span></span>
+                <b>250 kcal</b>
+            </label>
+            <label class="keuze uiteen" for="eten6">
+                <span><input type="radio" name="eten" id="eten6" value="Proteïneshake">Proteïneshake <span
+                        class="kleintekst">· 1 shake (300 ml)</span></span>
+                <b>160 kcal</b>
+            </label>
+
+            <div class="veld">
+                <label for="porties">Aantal porties <span class="verplicht">*</span></label>
+                <input type="number" id="porties" name="porties" class="invoer" value="1" min="0.5" step="0.5" required>
+            </div>
+
+            <div class="naastelkaar">
+                <a href="voeding.html" class="knop knopwit">Annuleren</a>
+                <button type="submit" class="knop knoprood" style="flex: 1">Toevoegen</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>© 2026 FitTrack</p>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+    </footer>
+
+    <!-- menu onderaan voor gsm -->
+    <div class="menuonder">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="routines.html"><i class="fa-solid fa-dumbbell"></i>Workout</a>
+        <a href="voeding.html" class="actief"><i class="fa-solid fa-utensils"></i>Voeding</a>
+        <a href="voortgang.html"><i class="fa-solid fa-chart-line"></i>Voortgang</a>
+        <a href="profiel.html"><i class="fa-solid fa-user"></i>Profiel</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

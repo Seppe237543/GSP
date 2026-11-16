@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oefeningen - FitTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="index.html"><img src="img/fittrack-logo.svg" alt="FitTrack logo" class="logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="routines.html" class="actief">Workout</a>
+            <a href="voeding.html">Voeding</a>
+            <a href="voortgang.html">Voortgang</a>
+            <a href="profiel.html">Profiel</a>
+        </nav>
+        <a href="profiel.html" class="profielknop"><i class="fa-solid fa-user"></i></a>
+    </header>
+
+    <div class="titel">
+        <h1>Oefeningen</h1>
+    </div>
+
+    <div class="tabs">
+        <a href="routines.html">Routines</a>
+        <a href="oefeningen.html" class="actief">Oefeningen</a>
+    </div>
+
+    <div class="inhoud">
+        <div class="kolommen">
+
+            <!-- zoeken en lijst -->
+            <div class="onderelkaar">
+                <div>
+                    <label for="zoeken" class="kleintekst"><b>Zoeken</b></label>
+                    <input type="search" id="zoeken" class="zoekbalk" placeholder="Zoek oefening of spiergroep"
+                        oninput="filterOefeningen()">
+                </div>
+
+                <div class="filters">
+                    <input type="radio" name="spiergroep" id="spiergroepalles" value="alles" class="filterkeuze" checked
+                        onchange="filterOefeningen()"><label for="spiergroepalles" class="filter">Alles</label>
+                    <input type="radio" name="spiergroep" id="spiergroepfavorieten" value="favorieten"
+                        class="filterkeuze" onchange="filterOefeningen()"><label for="spiergroepfavorieten"
+                        class="filter">Favorieten</label>
+                    <input type="radio" name="spiergroep" id="spiergroepborst" value="borst" class="filterkeuze"
+                        onchange="filterOefeningen()"><label for="spiergroepborst" class="filter">Borst</label>
+                    <input type="radio" name="spiergroep" id="spiergroeprug" value="rug" class="filterkeuze"
+                        onchange="filterOefeningen()"><label for="spiergroeprug" class="filter">Rug</label>
+                    <input type="radio" name="spiergroep" id="spiergroepbenen" value="benen" class="filterkeuze"
+                        onchange="filterOefeningen()"><label for="spiergroepbenen" class="filter">Benen</label>
+                    <input type="radio" name="spiergroep" id="spiergroepschouders" value="schouders" class="filterkeuze"
+                        onchange="filterOefeningen()"><label for="spiergroepschouders" class="filter">Schouders</label>
+                    <input type="radio" name="spiergroep" id="spiergroeparmen" value="armen" class="filterkeuze"
+                        onchange="filterOefeningen()"><label for="spiergroeparmen" class="filter">Armen</label>
+                    <input type="radio" name="spiergroep" id="spiergroepcore" value="core" class="filterkeuze"
+                        onchange="filterOefeningen()"><label for="spiergroepcore" class="filter">Core</label>
+                </div>
+
+                <div class="filters">
+                    <input type="radio" name="apparatuur" id="apparatuuralles" value="alles" class="filterkeuze" checked
+                        onchange="filterOefeningen()"><label for="apparatuuralles" class="filter">Alle
+                        apparatuur</label>
+                    <input type="radio" name="apparatuur" id="apparatuurbarbell" value="barbell" class="filterkeuze"
+                        onchange="filterOefeningen()"><label for="apparatuurbarbell" class="filter">Barbell</label>
+                    <input type="radio" name="apparatuur" id="apparatuurdumbbell" value="dumbbell" class="filterkeuze"
+                        onchange="filterOefeningen()"><label for="apparatuurdumbbell" class="filter">Dumbbell</label>
+                    <input type="radio" name="apparatuur" id="apparatuurmachine" value="machine" class="filterkeuze"
+                        onchange="filterOefeningen()"><label for="apparatuurmachine" class="filter">Machine</label>
+                    <input type="radio" name="apparatuur" id="apparatuurlichaamsgewicht" value="lichaamsgewicht"
+                        class="filterkeuze" onchange="filterOefeningen()"><label for="apparatuurlichaamsgewicht"
+                        class="filter">Lichaamsgewicht</label>
+                </div>
+
+                <p class="kleintekst"><b id="aantal">6 oefeningen</b></p>
+
+                <div class="kolommen2 oefeninglijst">
+
+                    <div class="oefening gekozen">
+                        <div class="oefeningfoto"><i class="fa-solid fa-dumbbell"></i></div>
+                        <div class="oefeninginfo">
+                            <h3>Bankdrukken</h3>
+                            <p>Borst · Barbell</p>
+                            <span class="labeltje labelgroen">Gemiddeld</span>
+                        </div>
+                        <input type="checkbox" id="fav1" class="hartjevinkje" checked onchange="filterOefeningen()">
+                        <label for="fav1" class="hartje"><i class="fa-regular fa-heart leeg"></i><i
+                                class="fa-solid fa-heart vol"></i></label>
+                    </div>
+
+                    <div class="oefening">
+                        <div class="oefeningfoto"><i class="fa-solid fa-dumbbell"></i></div>
+                        <div class="oefeninginfo">
+                            <h3>Dumbbell press</h3>
+                            <p>Borst · Dumbbell</p>
+                            <span class="labeltje labellicht">Beginner</span>
+                        </div>
+                        <input type="checkbox" id="fav2" class="hartjevinkje" onchange="filterOefeningen()">
+                        <label for="fav2" class="hartje"><i class="fa-regular fa-heart leeg"></i><i
+                                class="fa-solid fa-heart vol"></i></label>
+                    </div>
+
+                    <div class="oefening">
+                        <div class="oefeningfoto"><i class="fa-solid fa-dumbbell"></i></div>
+                        <div class="oefeninginfo">
+                            <h3>Lat pulldown</h3>
+                            <p>Rug · Machine</p>
+                            <span class="labeltje labellicht">Beginner</span>
+                        </div>
+                        <input type="checkbox" id="fav3" class="hartjevinkje" onchange="filterOefeningen()">
+                        <label for="fav3" class="hartje"><i class="fa-regular fa-heart leeg"></i><i
+                                class="fa-solid fa-heart vol"></i></label>
+                    </div>
+
+                    <div class="oefening">
+                        <div class="oefeningfoto"><i class="fa-solid fa-dumbbell"></i></div>
+                        <div class="oefeninginfo">
+                            <h3>Optrekken</h3>
+                            <p>Rug · Lichaamsgewicht</p>
+                            <span class="labeltje labeldonker">Gevorderd</span>
+                        </div>
+                        <input type="checkbox" id="fav4" class="hartjevinkje" onchange="filterOefeningen()">
+                        <label for="fav4" class="hartje"><i class="fa-regular fa-heart leeg"></i><i
+                                class="fa-solid fa-heart vol"></i></label>
+                    </div>
+
+                    <div class="oefening">
+                        <div class="oefeningfoto"><i class="fa-solid fa-dumbbell"></i></div>
+                        <div class="oefeninginfo">
+                            <h3>Squat</h3>
+                            <p>Benen · Barbell</p>
+                            <span class="labeltje labelgroen">Gemiddeld</span>
+                        </div>
+                        <input type="checkbox" id="fav5" class="hartjevinkje" checked onchange="filterOefeningen()">
+                        <label for="fav5" class="hartje"><i class="fa-regular fa-heart leeg"></i><i
+                                class="fa-solid fa-heart vol"></i></label>
+                    </div>
+
+                    <div class="oefening">
+                        <div class="oefeningfoto"><i class="fa-solid fa-dumbbell"></i></div>
+                        <div class="oefeninginfo">
+                            <h3>Plank</h3>
+                            <p>Core · Lichaamsgewicht</p>
+                            <span class="labeltje labellicht">Beginner</span>
+                        </div>
+                        <input type="checkbox" id="fav6" class="hartjevinkje" onchange="filterOefeningen()">
+                        <label for="fav6" class="hartje"><i class="fa-regular fa-heart leeg"></i><i
+                                class="fa-solid fa-heart vol"></i></label>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- uitleg van de oefening -->
+            <div class="kaart" id="uitleg">
+                <div class="foto">Foto / video</div>
+
+                <div class="uiteen" style="margin-top: 14px">
+                    <h1>Bankdrukken</h1>
+                    <input type="checkbox" id="fav7" class="hartjevinkje" checked>
+                    <label for="fav7" class="hartje"><i class="fa-regular fa-heart leeg"></i><i
+                            class="fa-solid fa-heart vol"></i></label>
+                </div>
+                <p>
+                    <span class="labeltje labellicht">Borst</span>
+                    <span class="labeltje labellicht">Barbell</span>
+                    <span class="labeltje labellicht">Gemiddeld</span>
+                </p>
+
+                <p class="kopje">Instructies</p>
+                <ol class="stappen">
+                    <li>Ga liggen met je voeten plat op de grond.</li>
+                    <li>Pak de stang net buiten schouderbreedte.</li>
+                    <li>Zak rustig naar je borst en duw terug omhoog.</li>
+                </ol>
+
+                <p class="kopje">Veelgemaakte fouten</p>
+                <p class="fout">Billen van de bank tillen</p>
+                <p class="fout">Ellebogen te ver naar buiten</p>
+
+                <p class="kopje">Alternatieven</p>
+                <div class="naastelkaar">
+                    <a href="#uitleg" class="filter">Dumbbell press</a>
+                    <a href="#uitleg" class="filter">Opdrukken</a>
+                </div>
+
+                <br>
+                <a href="routine-bewerken.html" class="knop knoprood breed">Toevoegen aan routine</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>© 2026 FitTrack</p>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+    </footer>
+
+    <!-- menu onderaan voor gsm -->
+    <div class="menuonder">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="routines.html" class="actief"><i class="fa-solid fa-dumbbell"></i>Workout</a>
+        <a href="voeding.html"><i class="fa-solid fa-utensils"></i>Voeding</a>
+        <a href="voortgang.html"><i class="fa-solid fa-chart-line"></i>Voortgang</a>
+        <a href="profiel.html"><i class="fa-solid fa-user"></i>Profiel</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voeding - FitTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="index.html"><img src="img/fittrack-logo.svg" alt="FitTrack logo" class="logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="routines.html">Workout</a>
+            <a href="voeding.html" class="actief">Voeding</a>
+            <a href="voortgang.html">Voortgang</a>
+            <a href="profiel.html">Profiel</a>
+        </nav>
+        <a href="profiel.html" class="profielknop"><i class="fa-solid fa-user"></i></a>
+    </header>
+
+    <div class="titel">
+        <h1>Voeding</h1>
+        <p>Vandaag · vrijdag 16 oktober</p>
+    </div>
+
+    <div class="inhoud">
+        <div class="kolommen">
+
+            <!-- links -->
+            <div class="onderelkaar">
+
+                <div class="kaart">
+                    <h2>Calorieën</h2>
+                    <p class="grootgetal">1.590 <small>/ 2.200 kcal</small></p>
+                    <p class="over">Nog 610 kcal over</p>
+                    <div class="balk">
+                        <div class="vulling" style="width: 72%"></div>
+                    </div>
+                    <div class="balkrij">
+                        Eiwit
+                        <div class="balk">
+                            <div class="vulling" style="width: 72%"></div>
+                        </div>
+                        <span>116 / 160 g</span>
+                    </div>
+                    <div class="balkrij">
+                        Koolhydraten
+                        <div class="balk">
+                            <div class="vulling" style="width: 75%"></div>
+                        </div>
+                        <span>180 / 240 g</span>
+                    </div>
+                    <div class="balkrij">
+                        Vet
+                        <div class="balk">
+                            <div class="vulling" style="width: 79%"></div>
+                        </div>
+                        <span>55 / 70 g</span>
+                    </div>
+                </div>
+
+                <a href="voeding-toevoegen.html" class="knop knoprood breed groot">+ Voeding toevoegen</a>
+                <div class="kolommen2">
+                    <a href="voeding-toevoegen.html" class="knop knopwit"><i class="fa-solid fa-magnifying-glass"></i>
+                        Zoek</a>
+                    <a href="voeding-toevoegen.html#scan" class="knop knopwit"><i class="fa-solid fa-barcode"></i> Scan
+                        barcode</a>
+                </div>
+
+                <div class="kaart">
+                    <div class="uiteen">
+                        <h2>Ontbijt</h2>
+                        <div class="naastelkaar">
+                            <span class="kleintekst"><b>450 kcal</b></span>
+                            <a href="voeding-toevoegen.html" class="plusknop">+</a>
+                        </div>
+                    </div>
+                    <div class="eten">
+                        <div><b>Havermout</b><small>1 kom (60 g)</small></div>
+                        <b>350 kcal</b>
+                    </div>
+                    <div class="eten">
+                        <div><b>Banaan</b><small>1 stuk (120 g)</small></div>
+                        <b>100 kcal</b>
+                    </div>
+                </div>
+
+                <div class="kaart">
+                    <div class="uiteen">
+                        <h2>Lunch</h2>
+                        <div class="naastelkaar">
+                            <span class="kleintekst"><b>550 kcal</b></span>
+                            <a href="voeding-toevoegen.html" class="plusknop">+</a>
+                        </div>
+                    </div>
+                    <div class="eten">
+                        <div><b>Kip met rijst</b><small>1 portie (400 g)</small></div>
+                        <b>550 kcal</b>
+                    </div>
+                </div>
+
+                <div class="kaart">
+                    <div class="uiteen">
+                        <h2>Diner</h2>
+                        <div class="naastelkaar">
+                            <span class="kleintekst"><b>0 kcal</b></span>
+                            <a href="voeding-toevoegen.html" class="plusknop">+</a>
+                        </div>
+                    </div>
+                    <p class="kleintekst">Nog niets toegevoegd.</p>
+                </div>
+
+                <div class="kaart">
+                    <div class="uiteen">
+                        <h2>Snacks</h2>
+                        <div class="naastelkaar">
+                            <span class="kleintekst"><b>200 kcal</b></span>
+                            <a href="voeding-toevoegen.html" class="plusknop">+</a>
+                        </div>
+                    </div>
+                    <div class="eten">
+                        <div><b>Griekse yoghurt</b><small>1 bakje (170 g)</small></div>
+                        <b>140 kcal</b>
+                    </div>
+                    <div class="eten">
+                        <div><b>Amandelen</b><small>1 handje (30 g)</small></div>
+                        <b>60 kcal</b>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- rechts -->
+            <div class="onderelkaar">
+
+                <div class="kaart" id="water">
+                    <h2><i class="fa-solid fa-droplet"></i> Water</h2>
+                    <p class="grootgetal" style="font-size: 30px"><span id="waterliters">1,25</span> <small>/ 2,5
+                            L</small></p>
+                    <div class="balk">
+                        <div class="vulling" id="waterbalk" style="width: 50%"></div>
+                    </div>
+                    <br>
+                    <div class="kolommen2">
+                        <button class="knop knopwit" onclick="waterEraf()">− 250 ml</button>
+                        <button class="knop knopwit" onclick="waterErbij()">+ 250 ml</button>
+                    </div>
+                </div>
+
+                <div class="donkerekaart">
+                    <h2 class="minttekst">Maaltijdsuggestie</h2>
+                    <p>Je hebt nog 610 kcal en 44 g eiwit te gaan. Kwark met noten (250 kcal, 25 g eiwit) past hier goed
+                        bij.</p>
+                </div>
+
+                <div class="kaart">
+                    <h2>Weekoverzicht</h2>
+                    <p class="kleintekst">kcal per dag, doel 2.200</p>
+                    <br>
+                    <div class="grafiek">
+                        <div class="staaf" style="height: 79%"></div>
+                        <div class="staaf" style="height: 84%"></div>
+                        <div class="staaf" style="height: 75%"></div>
+                        <div class="staaf" style="height: 85%"></div>
+                        <div class="staaf staafvandaag" style="height: 61%"></div>
+                        <div class="staaf" style="height: 0%"></div>
+                        <div class="staaf" style="height: 0%"></div>
+                    </div>
+                    <div class="grafieklabels">
+                        <span>Ma</span><span>Di</span><span>Wo</span><span>Do</span><span>Vr</span><span>Za</span><span>Zo</span>
+                    </div>
+                </div>
+
+                <div class="kaart">
+                    <h2>Favoriete maaltijden</h2>
+                    <div class="filters">
+                        <a href="voeding-toevoegen.html" class="filter">Havermout</a>
+                        <a href="voeding-toevoegen.html" class="filter">Kip met rijst</a>
+                        <a href="voeding-toevoegen.html" class="filter">Proteïneshake</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>© 2026 FitTrack</p>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+    </footer>
+
+    <!-- menu onderaan voor gsm -->
+    <div class="menuonder">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="routines.html"><i class="fa-solid fa-dumbbell"></i>Workout</a>
+        <a href="voeding.html" class="actief"><i class="fa-solid fa-utensils"></i>Voeding</a>
+        <a href="voortgang.html"><i class="fa-solid fa-chart-line"></i>Voortgang</a>
+        <a href="profiel.html"><i class="fa-solid fa-user"></i>Profiel</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

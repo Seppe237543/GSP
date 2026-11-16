@@ -1,0 +1,1523 @@
+/* ===== algemeen ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1E2D2F;
+    background-color: #F1F1F6;
+}
+
+a {
+    color: #3D7A6A;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 30px;
+    color: #041F1E;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: #3D7A6A;
+}
+
+.kleintekst {
+    font-size: 14px;
+    color: #5F6F71;
+}
+
+/* icoontjes van font awesome */
+h2 i,
+.kleintekst i,
+.bloklabel i {
+    color: #519E8A;
+}
+
+.knop i {
+    margin-right: 4px;
+}
+
+
+/* ===== header ===== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 30px;
+    background-color: #041F1E;
+}
+
+/* logo wit maken */
+.logo {
+    height: 48px;
+    filter: brightness(0) invert(1);
+}
+
+nav a {
+    color: #B2D0C6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 10px;
+    margin: 0 2px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a.actief {
+    background-color: #3D7A6A;
+    color: white;
+}
+
+.profielknop {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #519E8A;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.adminlabel {
+    background-color: white;
+    color: #041F1E;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.terug {
+    color: #B2D0C6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* ===== titel bovenaan ===== */
+
+.titel {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 6px solid #041F1E;
+}
+
+.titel p {
+    color: #5F6F71;
+    font-weight: bold;
+}
+
+.tabs {
+    background-color: white;
+    text-align: center;
+    border-bottom: 1px solid #D7E6E0;
+}
+
+.tabs a {
+    display: inline-block;
+    padding: 12px 18px;
+    color: #5F6F71;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tabs a.actief {
+    color: #041F1E;
+    border-bottom: 3px solid #519E8A;
+}
+
+
+/* ===== layout ===== */
+
+.inhoud {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.kolommen {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.kolommenlinks {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.kolommen2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.kolommen3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.kolommen4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.onderelkaar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.naastelkaar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.uiteen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* ===== kaarten ===== */
+
+.kaart {
+    background-color: white;
+    border: 2px solid #D7E6E0;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.donkerekaart {
+    background-color: #041F1E;
+    border: 2px solid #519E8A;
+    border-radius: 18px;
+    padding: 22px;
+    color: white;
+}
+
+.donkerekaart .kleintekst,
+.donkerekaart i {
+    color: #B2D0C6;
+}
+
+.groenekaart {
+    background-color: #3D7A6A;
+    border-radius: 18px;
+    padding: 20px;
+    color: white;
+}
+
+.groenekaart i {
+    color: white;
+}
+
+.groenerand {
+    border-color: #519E8A;
+}
+
+.roderand {
+    border-color: #EF233C;
+}
+
+
+/* ===== knoppen ===== */
+
+.knop {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.knoprood {
+    background-color: #EF233C;
+    color: white;
+}
+
+.knoprood:hover {
+    background-color: #D91C33;
+}
+
+.knopgroen {
+    background-color: #3D7A6A;
+    color: white;
+}
+
+.knopgroen:hover {
+    background-color: #346A5C;
+}
+
+.knopwit {
+    background-color: white;
+    border-color: #519E8A;
+    color: #1E2D2F;
+}
+
+.knopwit:hover {
+    background-color: #EEF5F2;
+}
+
+.knopzwartrand {
+    background-color: white;
+    border-color: #041F1E;
+    color: #041F1E;
+}
+
+.knoproodrand {
+    background-color: white;
+    border-color: #EF233C;
+    color: #C8102E;
+}
+
+.breed {
+    display: block;
+    width: 100%;
+}
+
+.groot {
+    padding: 16px 20px;
+    font-size: 18px;
+}
+
+.klein {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+
+/* ===== balkjes ===== */
+
+.balk {
+    height: 8px;
+    background-color: #E3EEEA;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+/* breedte staat in de html */
+.vulling {
+    height: 8px;
+    background-color: #519E8A;
+    border-radius: 10px;
+}
+
+.balkrij {
+    display: grid;
+    grid-template-columns: 110px 1fr 90px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.balkrij .balk {
+    margin-top: 0;
+}
+
+.balkrij span {
+    text-align: right;
+    color: #5F6F71;
+}
+
+
+/* ===== blokjes (water, stappen, ...) ===== */
+
+.blokje {
+    background-color: white;
+    border: 2px solid #D7E6E0;
+    border-radius: 16px;
+    padding: 14px;
+}
+
+.bloklabel {
+    font-size: 14px;
+    color: #5F6F71;
+    font-weight: bold;
+}
+
+.blokgetal {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.blokgetal small {
+    font-size: 13px;
+    color: #5F6F71;
+}
+
+.stijging {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background-color: #E3EEEA;
+    color: #2F6A5A;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* ===== home ===== */
+
+.cirkel {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #519E8A;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.week {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: #5F6F71;
+    font-weight: bold;
+}
+
+.dag {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #B8C8C3;
+    border-radius: 50%;
+    margin-bottom: 4px;
+}
+
+.gedaan {
+    background-color: #B2D0C6;
+    border-color: #519E8A;
+}
+
+.vandaag {
+    background-color: #519E8A;
+    border-color: #041F1E;
+}
+
+.snelknop {
+    display: block;
+    background-color: #EEF5F2;
+    border-radius: 14px;
+    padding: 12px 4px;
+    text-align: center;
+    color: #1E2D2F;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.snelknop i {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 4px;
+    color: #3D7A6A;
+}
+
+
+/* ===== labeltjes ===== */
+
+.labeltje {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.labellicht {
+    background-color: #E3EEEA;
+    color: #2F6A5A;
+}
+
+.labelgroen {
+    background-color: #3D7A6A;
+    color: white;
+}
+
+.labeldonker {
+    background-color: #041F1E;
+    color: white;
+}
+
+.labelgrijs {
+    background-color: #E6E9EC;
+    color: #5F6F71;
+}
+
+.labelrood {
+    background-color: #C8102E;
+    color: white;
+}
+
+
+/* ===== zoeken en filters ===== */
+
+.zoekbalk {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #519E8A;
+    border-radius: 16px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter {
+    padding: 8px 16px;
+    border: 2px solid #D7E6E0;
+    border-radius: 20px;
+    background-color: white;
+    color: #1E2D2F;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* het rondje zelf zie je niet, alleen het label */
+.filterkeuze {
+    display: none;
+}
+
+/* als het rondje aangeklikt is wordt het label groen */
+.filterkeuze:checked+.filter {
+    background-color: #3D7A6A;
+    border-color: #3D7A6A;
+    color: white;
+}
+
+
+/* ===== lijstjes ===== */
+
+.lijstrij {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 1px solid #E8F0ED;
+}
+
+.lijstrij:first-of-type {
+    border-top: none;
+}
+
+.lijsticoon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #E3EEEA;
+    color: #3D7A6A;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.lijsttekst {
+    flex: 1;
+}
+
+.lijsttekst small {
+    display: block;
+    color: #5F6F71;
+    font-size: 13px;
+}
+
+.lijstwaarde {
+    font-weight: bold;
+    text-align: right;
+}
+
+.lijstwaarde small {
+    display: block;
+    color: #5F6F71;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+/* ===== oefeningen ===== */
+
+.oefening {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: white;
+    border: 2px solid #D7E6E0;
+    border-radius: 18px;
+    padding: 10px;
+}
+
+.gekozen {
+    border-color: #519E8A;
+}
+
+.oefeningfoto {
+    width: 76px;
+    height: 76px;
+    border-radius: 14px;
+    background-color: #B2D0C6;
+    color: #041F1E;
+    text-align: center;
+    line-height: 76px;
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.oefeninginfo {
+    flex: 1;
+}
+
+.oefeninginfo p {
+    font-size: 13px;
+    color: #5F6F71;
+}
+
+/* hartje: het vinkje zie je niet */
+.hartjevinkje {
+    display: none;
+}
+
+.hartje {
+    font-size: 22px;
+    color: #519E8A;
+    cursor: pointer;
+}
+
+.hartje .vol {
+    display: none;
+    color: #EF233C;
+}
+
+.hartjevinkje:checked+.hartje .vol {
+    display: inline;
+}
+
+.hartjevinkje:checked+.hartje .leeg {
+    display: none;
+}
+
+.foto {
+    height: 190px;
+    border-radius: 16px;
+    background-color: #B2D0C6;
+    text-align: center;
+    line-height: 190px;
+    font-weight: bold;
+}
+
+.kopje {
+    margin: 18px 0 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #5F6F71;
+    text-transform: uppercase;
+}
+
+.stappen {
+    padding-left: 20px;
+    list-style: decimal;
+}
+
+.stappen li {
+    margin-bottom: 6px;
+}
+
+.fout {
+    background-color: #FDEEF0;
+    color: #8A1020;
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+
+/* ===== routines ===== */
+
+.routine {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    border: 2px solid #D7E6E0;
+    border-radius: 18px;
+    padding: 14px;
+}
+
+.routineinfo {
+    flex: 1;
+}
+
+.routineoefening {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    background-color: #F7FAF9;
+    border: 2px solid #D7E6E0;
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.routineoefening strong {
+    flex: 1;
+}
+
+.nummer {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #3D7A6A;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dagen {
+    display: flex;
+    gap: 6px;
+}
+
+.dagen span {
+    flex: 1;
+    padding: 8px 0;
+    border: 2px solid #D7E6E0;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dagen .aan {
+    background-color: #3D7A6A;
+    border-color: #3D7A6A;
+    color: white;
+}
+
+/* dagen aanvinken bij routine bewerken */
+.dagvinkje {
+    display: none;
+}
+
+.dagknop {
+    flex: 1;
+    padding: 8px 0;
+    border: 2px solid #D7E6E0;
+    border-radius: 12px;
+    background-color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dagvinkje:checked+.dagknop {
+    background-color: #3D7A6A;
+    border-color: #3D7A6A;
+    color: white;
+}
+
+.kleinvak {
+    width: 70px;
+    padding: 8px;
+    border: 2px solid #D7E6E0;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+/* ===== voeding ===== */
+
+.grootgetal {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.grootgetal small {
+    font-size: 18px;
+    color: #5F6F71;
+}
+
+.over {
+    color: #2F6A5A;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.eten {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid #E8F0ED;
+}
+
+.eten small {
+    display: block;
+    color: #5F6F71;
+}
+
+.plusknop {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #3D7A6A;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+
+/* ===== grafiek ===== */
+
+.grafiek {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 160px;
+    border-bottom: 2px solid #E3EEEA;
+}
+
+/* hoogte staat in de html */
+.staaf {
+    flex: 1;
+    background-color: #519E8A;
+    border-radius: 6px 6px 0 0;
+}
+
+.staafvandaag {
+    background-color: #041F1E;
+}
+
+.grafieklabels {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+    text-align: center;
+    font-size: 12px;
+    color: #5F6F71;
+}
+
+.grafieklabels span {
+    flex: 1;
+}
+
+
+/* ===== formulieren ===== */
+
+.veld {
+    margin-bottom: 16px;
+}
+
+.veld label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.invoer {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #D7E6E0;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: white;
+}
+
+.invoer:focus {
+    outline: none;
+    border-color: #519E8A;
+}
+
+.verplicht {
+    color: #C8102E;
+}
+
+.foutveld {
+    border-color: #EF233C;
+    background-color: #FFF8F9;
+}
+
+.fouttekst {
+    color: #C8102E;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.keuze {
+    display: block;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border: 2px solid #D7E6E0;
+    border-radius: 14px;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.keuze input {
+    margin-right: 10px;
+}
+
+
+/* ===== meldingen ===== */
+
+.meldinggoed {
+    background-color: #3D7A6A;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-weight: bold;
+}
+
+.meldingfout {
+    background-color: #FDE4E7;
+    border: 2px solid #E2B4BB;
+    color: #7A0A1C;
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-weight: bold;
+}
+
+.meldingopgelet {
+    background-color: #FFF4E0;
+    border: 2px solid #E9C98A;
+    color: #5A3D00;
+    padding: 12px 16px;
+    border-radius: 14px;
+}
+
+
+/* ===== profiel ===== */
+
+.profieltop {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #519E8A;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 64px;
+    flex-shrink: 0;
+}
+
+.ministats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 16px 0;
+}
+
+.ministat {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #519E8A;
+    border-radius: 10px;
+    background-color: #EEF5F2;
+    font-size: 12px;
+    color: #5F6F71;
+}
+
+.ministat strong {
+    display: block;
+    font-size: 13px;
+    color: #1E2D2F;
+    white-space: nowrap;
+}
+
+.groeptitel {
+    margin: 0 0 8px 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #5F6F71;
+    text-transform: uppercase;
+}
+
+.instellingen {
+    background-color: white;
+    border: 2px solid #519E8A;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.instelling {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-top: 1px solid #E8F0ED;
+    color: #1E2D2F;
+    text-decoration: none;
+}
+
+.instelling:first-child {
+    border-top: none;
+}
+
+.instelling:hover {
+    background-color: #F7FAF9;
+}
+
+.icoon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: #E3EEEA;
+    color: #3D7A6A;
+    text-align: center;
+    line-height: 36px;
+    flex-shrink: 0;
+}
+
+.instellingtekst {
+    flex: 1;
+    font-weight: bold;
+}
+
+.instellingtekst small {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    color: #5F6F71;
+}
+
+.waarde {
+    font-size: 14px;
+    color: #5F6F71;
+}
+
+.pijl {
+    color: #5F6F71;
+}
+
+.instelling input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+}
+
+
+/* ===== admin ===== */
+
+.tabel {
+    background-color: white;
+    border: 2px solid #D7E6E0;
+    border-radius: 18px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #E8F0ED;
+}
+
+th {
+    font-size: 12px;
+    color: #5F6F71;
+    text-transform: uppercase;
+}
+
+.paginas a {
+    display: inline-block;
+    width: 40px;
+    padding: 8px 0;
+    border: 2px solid #D7E6E0;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    color: #1E2D2F;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.paginas a.actief {
+    background-color: #041F1E;
+    border-color: #041F1E;
+    color: white;
+}
+
+
+/* ===== workout pagina ===== */
+
+.workoutpagina {
+    background-color: #041F1E;
+    color: white;
+}
+
+.workoutboven {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 24px;
+}
+
+.workoutboven p {
+    color: #B2D0C6;
+    font-size: 14px;
+}
+
+.donkereknop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: 2px solid #519E8A;
+    border-radius: 16px;
+    background-color: #1E2D2F;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.stopknop {
+    margin-left: auto;
+    padding: 12px 14px;
+    border: 2px solid #EF233C;
+    border-radius: 14px;
+    color: #FF7B8B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.workoutfoto {
+    height: 220px;
+    border: 2px solid #519E8A;
+    border-radius: 20px;
+    background-color: #1E2D2F;
+    text-align: center;
+    line-height: 220px;
+    color: #7EB09B;
+    font-weight: bold;
+}
+
+.workoutpagina h1 {
+    color: white;
+    margin-top: 12px;
+}
+
+.minttekst {
+    color: #B2D0C6;
+    font-weight: bold;
+}
+
+.set {
+    padding: 8px;
+    border: 2px solid #2F4547;
+    border-radius: 14px;
+    background-color: #1E2D2F;
+    text-align: center;
+    font-weight: bold;
+}
+
+.set small {
+    display: block;
+    color: #B2D0C6;
+}
+
+.setklaar {
+    background-color: #519E8A;
+    border-color: #519E8A;
+    color: #041F1E;
+}
+
+.setklaar small {
+    color: #041F1E;
+}
+
+.setnu {
+    border-color: white;
+}
+
+.rust {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background-color: #519E8A;
+    color: #041F1E;
+    border-radius: 20px;
+    padding: 16px 18px;
+}
+
+.rusttijd {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.rust button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: #041F1E;
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.donkervak {
+    background-color: #1E2D2F;
+    border: 2px solid #2F4547;
+    border-radius: 20px;
+    padding: 18px;
+}
+
+.donkervak label {
+    display: block;
+    color: #B2D0C6;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.grootvak {
+    width: 100%;
+    height: 80px;
+    border: 3px solid #519E8A;
+    border-radius: 18px;
+    background-color: #041F1E;
+    color: white;
+    font-family: inherit;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.plusmin {
+    flex: 1;
+    padding: 14px 0;
+    margin-top: 8px;
+    border: none;
+    border-radius: 14px;
+    background-color: #2F4547;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.workoutonder {
+    display: flex;
+    gap: 12px;
+    padding: 16px 24px 24px;
+    border-top: 6px solid #1E2D2F;
+}
+
+.workoutonder .knoprood {
+    flex: 1;
+    font-size: 20px;
+}
+
+
+/* ===== popup ===== */
+/* de popup is verstopt en komt tevoorschijn als de link naar #popupnaam gaat (:target) */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 20px;
+    background-color: rgba(4, 31, 30, 0.6);
+}
+
+.popup:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupvak {
+    width: 100%;
+    max-width: 420px;
+    background-color: white;
+    color: #1E2D2F;
+    border-top: 6px solid #C8102E;
+    border-radius: 18px;
+    padding: 24px;
+}
+
+.popupgroen {
+    border-top-color: #519E8A;
+}
+
+.popupvak h2 {
+    font-size: 22px;
+}
+
+
+/* ===== login, registreren, onboarding ===== */
+
+.loginpagina {
+    max-width: 440px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.loginlogo {
+    display: block;
+    height: 120px;
+    margin: 0 auto 24px;
+}
+
+.stapbalkjes {
+    display: flex;
+    gap: 6px;
+    margin: 6px 0 20px;
+}
+
+.stapbalkjes span {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #D7E6E0;
+}
+
+.stapbalkjes .klaar {
+    background-color: #519E8A;
+}
+
+
+/* ===== footer ===== */
+
+footer {
+    background-color: #041F1E;
+    color: #B2D0C6;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+footer a {
+    color: white;
+    margin: 0 8px;
+}
+
+
+/* ===== menu onderaan (gsm) ===== */
+
+.menuonder {
+    display: none;
+}
+
+
+/* ===== dark mode ===== */
+/* javascript zet de class "donker" op de body */
+
+body.donker {
+    background-color: #0E1A1A;
+    color: #E6EEEB;
+}
+
+.donker .kaart,
+.donker .blokje,
+.donker .instellingen,
+.donker .oefening,
+.donker .routine,
+.donker .routineoefening,
+.donker .tabel,
+.donker .titel,
+.donker .tabs,
+.donker .menuonder,
+.donker .keuze,
+.donker .filter,
+.donker .invoer,
+.donker .zoekbalk,
+.donker .dagknop,
+.donker .popupvak {
+    background-color: #1E2D2F;
+    border-color: #2F4547;
+    color: #E6EEEB;
+}
+
+.donker h1,
+.donker .instelling,
+.donker .tabs a.actief,
+.donker .snelknop,
+.donker .knopwit {
+    color: #E6EEEB;
+}
+
+.donker .kleintekst,
+.donker .waarde,
+.donker .bloklabel,
+.donker .titel p {
+    color: #B2D0C6;
+}
+
+.donker .knopwit,
+.donker .snelknop,
+.donker .balk {
+    background-color: #2F4547;
+}
+
+
+/* ===== gsm (kleiner dan 800px) ===== */
+
+@media (max-width: 800px) {
+
+    body {
+        padding-bottom: 80px;
+    }
+
+    header {
+        padding: 0 16px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menuonder {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: 6px solid #041F1E;
+        padding: 8px 0 12px;
+    }
+
+    .menuonder a {
+        text-align: center;
+        color: #5F6F71;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .menuonder i {
+        display: block;
+        font-size: 22px;
+    }
+
+    .menuonder a.actief {
+        color: #3D7A6A;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .inhoud {
+        padding: 16px;
+    }
+
+    .kolommen,
+    .kolommenlinks,
+    .kolommen3,
+    .oefeninglijst,
+    .workoutkolommen {
+        grid-template-columns: 1fr;
+    }
+
+    .kolommen4 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .balkrij {
+        grid-template-columns: 90px 1fr 80px;
+    }
+
+    .workoutboven,
+    .workoutonder {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .workoutfoto {
+        height: 150px;
+        line-height: 150px;
+    }
+
+    .workoutpagina {
+        padding-bottom: 0;
+    }
+}

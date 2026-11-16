@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiel - FitTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="index.html"><img src="img/fittrack-logo.svg" alt="FitTrack logo" class="logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="routines.html">Workout</a>
+            <a href="voeding.html">Voeding</a>
+            <a href="voortgang.html">Voortgang</a>
+            <a href="profiel.html" class="actief">Profiel</a>
+        </nav>
+        <a href="profiel.html" class="profielknop"><i class="fa-solid fa-user"></i></a>
+    </header>
+
+    <div class="titel">
+        <h1>Profiel &amp; Instellingen</h1>
+        <p>Beheer je account, doelen en voorkeuren</p>
+    </div>
+
+    <div class="inhoud">
+        <div class="kolommen3">
+
+            <!-- kolom 1 -->
+            <div>
+                <div class="kaart groenerand" style="margin-bottom: 20px">
+                    <div class="profieltop">
+                        <div class="avatar">N</div>
+                        <div>
+                            <h2 style="margin: 0">Naam Achternaam</h2>
+                            <p class="kleintekst">naam@email.com</p>
+                        </div>
+                    </div>
+                    <div class="ministats">
+                        <div class="ministat">Doel<strong>3 kg afvallen</strong></div>
+                        <div class="ministat">Niveau<strong>Gemiddeld</strong></div>
+                        <div class="ministat">Streak<strong>12 dagen</strong></div>
+                    </div>
+                    <a href="profiel-bewerken.html" class="knop knopwit breed"><i class="fa-solid fa-pen"></i> Profiel
+                        bewerken</a>
+                </div>
+
+                <div class="groenekaart" style="margin-bottom: 20px">
+                    <h3><i class="fa-solid fa-shield-halved"></i> Privacy-check</h3>
+                    <p>2 apps hebben toegang tot je gezondheidsdata. Bekijk wie wat ziet in je privacydashboard.</p>
+                </div>
+
+                <h3 class="groeptitel">Meldingen</h3>
+                <div class="instellingen">
+                    <label class="instelling" for="meldingworkout">
+                        <span class="icoon"><i class="fa-solid fa-bell"></i></span>
+                        <span class="instellingtekst">Workout-herinneringen<small>Elke dag om 18:00</small></span>
+                        <input type="checkbox" id="meldingworkout" checked>
+                    </label>
+                    <label class="instelling" for="meldingwater">
+                        <span class="icoon"><i class="fa-solid fa-droplet"></i></span>
+                        <span class="instellingtekst">Water-herinnering</span>
+                        <input type="checkbox" id="meldingwater" checked>
+                    </label>
+                    <label class="instelling" for="meldingrapport">
+                        <span class="icoon"><i class="fa-solid fa-chart-simple"></i></span>
+                        <span class="instellingtekst">Wekelijkse voortgangsrapport</span>
+                        <input type="checkbox" id="meldingrapport">
+                    </label>
+                </div>
+            </div>
+
+            <!-- kolom 2 -->
+            <div>
+                <h3 class="groeptitel">Account</h3>
+                <div class="instellingen">
+                    <a href="profiel-bewerken.html#gegevens" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-user"></i></span>
+                        <span class="instellingtekst">Persoonlijke gegevens<small>Naam, geboortedatum, lengte,
+                                gewicht</small></span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                    <a href="profiel-bewerken.html#wachtwoord" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-lock"></i></span>
+                        <span class="instellingtekst">Wachtwoord &amp; beveiliging<small>Wachtwoord, e-mail,
+                                2-stapverificatie</small></span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                    <a href="profiel-bewerken.html#coach" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-users"></i></span>
+                        <span class="instellingtekst">Gezins- / coachaccount<small>Nodig gezinsleden of je coach
+                                uit</small></span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                </div>
+
+                <h3 class="groeptitel">Training</h3>
+                <div class="instellingen">
+                    <a href="profiel-bewerken.html#doel" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-bullseye"></i></span>
+                        <span class="instellingtekst">Fitnessdoel</span>
+                        <span class="waarde">3 kg afvallen</span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                    <a href="profiel-bewerken.html#niveau" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-signal"></i></span>
+                        <span class="instellingtekst">Ervaringsniveau</span>
+                        <span class="waarde">Gemiddeld</span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                    <a href="profiel-bewerken.html#apparatuur" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-dumbbell"></i></span>
+                        <span class="instellingtekst">Apparatuur</span>
+                        <span class="waarde">Gym · 8 items</span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- kolom 3 -->
+            <div>
+                <h3 class="groeptitel">App</h3>
+                <div class="instellingen">
+                    <a href="profiel-bewerken.html#eenheden" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-ruler"></i></span>
+                        <span class="instellingtekst">Eenheden</span>
+                        <span class="waarde">kg · cm · kcal</span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                    <a href="profiel-bewerken.html#taal" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-globe"></i></span>
+                        <span class="instellingtekst">Taal</span>
+                        <span class="waarde">Nederlands</span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                    <label class="instelling" for="darkmode">
+                        <span class="icoon"><i class="fa-solid fa-moon"></i></span>
+                        <span class="instellingtekst">Dark mode</span>
+                        <input type="checkbox" id="darkmode" onchange="wisselDonkereModus()">
+                    </label>
+                </div>
+
+                <h3 class="groeptitel">Koppelingen</h3>
+                <div class="instellingen">
+                    <a href="profiel-bewerken.html#koppelingen" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-heart-pulse"></i></span>
+                        <span class="instellingtekst">Apple Health / Health Connect</span>
+                        <span class="labeltje labellicht">Gekoppeld</span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                    <a href="profiel-bewerken.html#koppelingen" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-stopwatch"></i></span>
+                        <span class="instellingtekst">Smartwatch koppeling</span>
+                        <span class="waarde">Niet gekoppeld</span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                    <a href="profiel-bewerken.html#koppelingen" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="instellingtekst">Wearable-instellingen<small>Sync, hartslagzones, meldingen en
+                                horloge</small></span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                </div>
+
+                <h3 class="groeptitel">Privacy &amp; data</h3>
+                <div class="instellingen">
+                    <a href="privacy.html#dashboard" class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-shield-halved"></i></span>
+                        <span class="instellingtekst">Privacydashboard<small>Wie heeft toegang tot welke
+                                data</small></span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                    <label class="instelling" for="coach">
+                        <span class="icoon"><i class="fa-solid fa-eye"></i></span>
+                        <span class="instellingtekst">Voortgang zichtbaar voor coach</span>
+                        <input type="checkbox" id="coach" checked>
+                    </label>
+                    <a href="data/mijn-gegevens.csv" download class="instelling">
+                        <span class="icoon"><i class="fa-solid fa-download"></i></span>
+                        <span class="instellingtekst">Data exporteren<small>Download al je gegevens (CSV)</small></span>
+                        <i class="fa-solid fa-chevron-right pijl"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- uitloggen en verwijderen -->
+        <div class="kaart roderand uiteen" style="flex-wrap: wrap">
+            <div>
+                <h3>Account &amp; sessie</h3>
+                <p class="kleintekst">Account verwijderen kan niet ongedaan gemaakt worden.</p>
+            </div>
+            <div class="naastelkaar">
+                <a href="login.html" class="knop knopzwartrand"><i class="fa-solid fa-right-from-bracket"></i>
+                    Uitloggen</a>
+                <a href="#verwijderaccount" class="knop knoprood"><i class="fa-solid fa-trash"></i> Account
+                    verwijderen</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup account verwijderen -->
+    <div class="popup" id="verwijderaccount">
+        <div class="popupvak">
+            <h2>Account verwijderen?</h2>
+            <p>Al je gegevens, workouts en voortgang worden gewist. Dit kan niet ongedaan gemaakt worden.</p>
+            <br>
+            <form action="login.html" method="post">
+                <div class="veld">
+                    <label for="controle">Typ je wachtwoord om te bevestigen <span class="verplicht">*</span></label>
+                    <input type="password" id="controle" name="wachtwoord" class="invoer" required>
+                </div>
+                <div class="naastelkaar">
+                    <a href="#" class="knop knopwit">Annuleren</a>
+                    <button type="submit" class="knop knoprood">Verwijderen</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>© 2026 FitTrack</p>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+    </footer>
+
+    <!-- menu onderaan voor gsm -->
+    <div class="menuonder">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="routines.html"><i class="fa-solid fa-dumbbell"></i>Workout</a>
+        <a href="voeding.html"><i class="fa-solid fa-utensils"></i>Voeding</a>
+        <a href="voortgang.html"><i class="fa-solid fa-chart-line"></i>Voortgang</a>
+        <a href="profiel.html" class="actief"><i class="fa-solid fa-user"></i>Profiel</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

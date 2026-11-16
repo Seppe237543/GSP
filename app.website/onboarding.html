@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding - FitTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="loginpagina">
+        <img src="img/fittrack-logo.svg" alt="FitTrack logo" class="loginlogo">
+
+        <div class="uiteen">
+            <h1>Welkom bij FitTrack!</h1>
+            <a href="index.html" class="kleintekst">Overslaan</a>
+        </div>
+        <p class="kleintekst">Beantwoord deze 4 vragen. Je kan alles later aanpassen in je profiel.</p>
+        <br>
+
+        <form action="index.html" method="post">
+
+            <!-- vraag 1 -->
+            <p class="kopje">1. Wat is je doel?</p>
+            <label class="keuze"><input type="radio" name="doel" value="Afvallen" checked>Afvallen</label>
+            <label class="keuze"><input type="radio" name="doel" value="Spiermassa opbouwen">Spiermassa opbouwen</label>
+            <label class="keuze"><input type="radio" name="doel" value="Sterker worden">Sterker worden</label>
+            <label class="keuze"><input type="radio" name="doel" value="Fit blijven">Fit blijven</label>
+
+            <!-- vraag 2 -->
+            <p class="kopje">2. Wat is je ervaring?</p>
+            <label class="keuze"><input type="radio" name="niveau" value="Beginner (net begonnen)" checked>Beginner (net
+                begonnen)</label>
+            <label class="keuze"><input type="radio" name="niveau" value="Gemiddeld (een paar maanden)">Gemiddeld (een
+                paar maanden)</label>
+            <label class="keuze"><input type="radio" name="niveau" value="Gevorderd (meer dan een jaar)">Gevorderd (meer
+                dan een jaar)</label>
+
+            <!-- vraag 3 -->
+            <p class="kopje">3. Welke apparatuur heb je?</p>
+            <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Barbell">Barbell</label>
+            <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Dumbbells">Dumbbells</label>
+            <label class="keuze"><input type="checkbox" name="apparatuur[]"
+                    value="Fitnessmachines">Fitnessmachines</label>
+            <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Optrekstang">Optrekstang</label>
+            <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Kettlebell">Kettlebell</label>
+            <label class="keuze"><input type="checkbox" name="apparatuur[]" value="Geen (thuis trainen)">Geen (thuis
+                trainen)</label>
+            <div class="veld">
+                <label for="gym">In welke gym train je?</label>
+                <input type="text" id="gym" name="gym" class="invoer" placeholder="Bv. Basic-Fit Beveren">
+            </div>
+
+            <!-- vraag 4 -->
+            <p class="kopje">4. Wanneer train je en wat zijn je gegevens?</p>
+            <div class="dagen">
+                <input type="checkbox" id="dagma" name="dagen[]" value="Ma" class="dagvinkje"><label for="dagma"
+                    class="dagknop">Ma</label>
+                <input type="checkbox" id="dagdi" name="dagen[]" value="Di" class="dagvinkje"><label for="dagdi"
+                    class="dagknop">Di</label>
+                <input type="checkbox" id="dagwo" name="dagen[]" value="Wo" class="dagvinkje"><label for="dagwo"
+                    class="dagknop">Wo</label>
+                <input type="checkbox" id="dagdo" name="dagen[]" value="Do" class="dagvinkje"><label for="dagdo"
+                    class="dagknop">Do</label>
+                <input type="checkbox" id="dagvr" name="dagen[]" value="Vr" class="dagvinkje"><label for="dagvr"
+                    class="dagknop">Vr</label>
+                <input type="checkbox" id="dagza" name="dagen[]" value="Za" class="dagvinkje"><label for="dagza"
+                    class="dagknop">Za</label>
+                <input type="checkbox" id="dagzo" name="dagen[]" value="Zo" class="dagvinkje"><label for="dagzo"
+                    class="dagknop">Zo</label>
+            </div>
+            <br>
+            <div class="kolommen2">
+                <div class="veld">
+                    <label for="lengte">Lengte (cm) <span class="verplicht">*</span></label>
+                    <input type="number" id="lengte" name="lengte" class="invoer" required>
+                </div>
+                <div class="veld">
+                    <label for="gewicht">Gewicht (kg) <span class="verplicht">*</span></label>
+                    <input type="number" id="gewicht" name="gewicht" class="invoer" step="0.1" required>
+                </div>
+            </div>
+
+            <div class="naastelkaar">
+                <a href="registreren.html" class="knop knopwit">Terug</a>
+                <button type="submit" class="knop knoprood" style="flex: 1">Klaar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

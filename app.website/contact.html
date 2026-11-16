@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - FitTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="index.html"><img src="img/fittrack-logo.svg" alt="FitTrack logo" class="logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="routines.html">Workout</a>
+            <a href="voeding.html">Voeding</a>
+            <a href="voortgang.html">Voortgang</a>
+            <a href="profiel.html">Profiel</a>
+        </nav>
+        <a href="profiel.html" class="profielknop"><i class="fa-solid fa-user"></i></a>
+    </header>
+
+    <div class="titel">
+        <h1>Contact</h1>
+        <p>Vraag of probleem? Stuur ons een bericht</p>
+    </div>
+
+    <div class="inhoud">
+        <form class="kaart" action="contact.html" method="post" style="max-width: 640px; margin: 0 auto">
+            <div class="veld">
+                <label for="naam">Naam <span class="verplicht">*</span></label>
+                <input type="text" id="naam" name="naam" class="invoer" required>
+            </div>
+            <div class="veld">
+                <label for="email">E-mailadres <span class="verplicht">*</span></label>
+                <input type="email" id="email" name="email" class="invoer" required>
+            </div>
+            <div class="veld">
+                <label for="onderwerp">Onderwerp</label>
+                <select id="onderwerp" name="onderwerp" class="invoer">
+                    <option>Vraag</option>
+                    <option>Probleem met de app</option>
+                    <option>Idee of feedback</option>
+                </select>
+            </div>
+            <div class="veld">
+                <label for="bericht">Bericht <span class="verplicht">*</span></label>
+                <textarea id="bericht" name="bericht" class="invoer" rows="5" required></textarea>
+            </div>
+            <p class="kleintekst"><span class="verplicht">*</span> = verplicht veld</p>
+            <br>
+            <button type="submit" class="knop knoprood breed">Versturen</button>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>© 2026 FitTrack</p>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+    </footer>
+
+    <!-- menu onderaan voor gsm -->
+    <div class="menuonder">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="routines.html"><i class="fa-solid fa-dumbbell"></i>Workout</a>
+        <a href="voeding.html"><i class="fa-solid fa-utensils"></i>Voeding</a>
+        <a href="voortgang.html"><i class="fa-solid fa-chart-line"></i>Voortgang</a>
+        <a href="profiel.html"><i class="fa-solid fa-user"></i>Profiel</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
