@@ -12,12 +12,6 @@ body {
     line-height: 1.5;
     color: #1E2D2F;
     background-color: #F1F1F6;
-
-    /* footer altijd onderaan: de body is minstens zo hoog als het scherm
-       en zet alles onder elkaar (flex). De inhoud vult de lege ruimte op. */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 a {
@@ -164,12 +158,9 @@ nav a.actief {
 /* ===== layout ===== */
 
 .inhoud {
-    width: 100%;
     max-width: 1180px;
     margin: 0 auto;
     padding: 24px;
-    /* neemt alle lege ruimte in, zo schuift de footer naar onder */
-    flex-grow: 1;
 }
 
 .kolommen {
@@ -1342,7 +1333,6 @@ th {
 /* ===== login, registreren, onboarding ===== */
 
 .loginpagina {
-    width: 100%;
     max-width: 440px;
     margin: 40px auto;
     padding: 0 16px;
@@ -1447,255 +1437,10 @@ body.donker {
 }
 
 
-/* =========================================================
-   RESPONSIVE
-   volgorde: groot scherm -> laptop -> tablet -> gsm
-   gsm staat als laatste, zo wint die van tablet
-   ========================================================= */
+/* ===== gsm (kleiner dan 800px) ===== */
 
+@media (max-width: 800px) {
 
-/* ===== groot scherm (vanaf 1601px) ===== */
-/* alles een beetje groter en breder, zodat het niet verloren oogt */
-
-@media (min-width: 1601px) {
-
-    body {
-        font-size: 18px;
-    }
-
-    h1 {
-        font-size: 38px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    h3 {
-        font-size: 19px;
-    }
-
-    .kleintekst,
-    .bloklabel,
-    .waarde {
-        font-size: 16px;
-    }
-
-    /* header */
-    header {
-        height: 80px;
-        padding: 0 48px;
-    }
-
-    .logo {
-        height: 58px;
-    }
-
-    nav a {
-        font-size: 18px;
-        padding: 10px 18px;
-    }
-
-    .profielknop {
-        width: 48px;
-        height: 48px;
-        line-height: 48px;
-        font-size: 20px;
-    }
-
-    .titel {
-        padding: 32px;
-    }
-
-    .tabs a {
-        padding: 16px 24px;
-        font-size: 18px;
-    }
-
-    /* bredere inhoud */
-    .inhoud {
-        max-width: 1520px;
-        padding: 40px;
-    }
-
-    .kolommen,
-    .kolommenlinks,
-    .kolommen3 {
-        gap: 32px;
-    }
-
-    .kolommen2,
-    .kolommen4 {
-        gap: 18px;
-    }
-
-    .onderelkaar {
-        gap: 24px;
-    }
-
-    /* kaarten en blokjes */
-    .kaart,
-    .groenekaart {
-        padding: 28px;
-        border-radius: 22px;
-    }
-
-    .donkerekaart {
-        padding: 30px;
-        border-radius: 22px;
-    }
-
-    .blokje {
-        padding: 20px;
-    }
-
-    .blokgetal {
-        font-size: 28px;
-    }
-
-    .grootgetal {
-        font-size: 60px;
-    }
-
-    .cirkel {
-        width: 130px;
-        height: 130px;
-        line-height: 110px;
-        font-size: 28px;
-    }
-
-    .oefeningfoto {
-        width: 96px;
-        height: 96px;
-        line-height: 96px;
-        font-size: 38px;
-    }
-
-    .foto {
-        height: 260px;
-        line-height: 260px;
-    }
-
-    .grafiek {
-        height: 220px;
-    }
-
-    /* knoppen en formulieren */
-    .knop {
-        font-size: 18px;
-        padding: 14px 24px;
-    }
-
-    .groot {
-        font-size: 20px;
-        padding: 18px 24px;
-    }
-
-    .invoer,
-    .zoekbalk {
-        font-size: 18px;
-    }
-
-    /* lijstjes en kleine tekstjes */
-    .lijsttekst small,
-    .oefeninginfo p,
-    .snelknop {
-        font-size: 15px;
-    }
-
-    .lijsticoon {
-        width: 48px;
-        height: 48px;
-        line-height: 48px;
-        font-size: 20px;
-    }
-
-    th,
-    td {
-        padding: 16px 20px;
-    }
-
-    /* login, registreren, ... */
-    .loginpagina {
-        max-width: 540px;
-        margin: 60px auto;
-    }
-
-    .popupvak {
-        max-width: 500px;
-    }
-
-    /* workout pagina */
-    .workoutfoto {
-        height: 320px;
-        line-height: 320px;
-    }
-
-    .workoutboven,
-    .workoutonder {
-        padding-left: 48px;
-        padding-right: 48px;
-    }
-
-    footer {
-        font-size: 16px;
-        padding: 28px;
-    }
-}
-
-
-/* ===== laptop (1025px - 1600px) ===== */
-/* dit is de gewone stijl van hierboven in het bestand,
-   daarvoor is dus geen aparte media query nodig */
-
-
-/* ===== tablet (601px - 1024px) ===== */
-
-@media (max-width: 1024px) {
-
-    h1 {
-        font-size: 26px;
-    }
-
-    /* header: menu kleiner maken zodat alles op 1 lijn past */
-    header {
-        padding: 0 20px;
-    }
-
-    nav a {
-        font-size: 15px;
-        padding: 8px 10px;
-        margin: 0;
-    }
-
-    .inhoud {
-        padding: 20px;
-    }
-
-    /* 2 kolommen naast elkaar is te smal, dus onder elkaar */
-    .kolommen,
-    .kolommenlinks,
-    .workoutkolommen {
-        grid-template-columns: 1fr;
-    }
-
-    /* 3 kolommen worden er 2 */
-    .kolommen3 {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .workoutfoto {
-        height: 180px;
-        line-height: 180px;
-    }
-}
-
-
-/* ===== gsm (tot 600px) ===== */
-
-@media (max-width: 600px) {
-
-    /* ruimte onderaan voor het menu dat vast staat */
     body {
         padding-bottom: 80px;
     }
@@ -1704,7 +1449,6 @@ body.donker {
         padding: 0 16px;
     }
 
-    /* het menu bovenaan verdwijnt, het menu onderaan komt in de plaats */
     nav {
         display: none;
     }
@@ -1742,25 +1486,10 @@ body.donker {
         font-size: 24px;
     }
 
-    .titel {
-        padding: 16px;
-    }
-
-    .tabs a {
-        padding: 12px 14px;
-    }
-
     .inhoud {
         padding: 16px;
     }
 
-    .kaart,
-    .donkerekaart,
-    .groenekaart {
-        padding: 16px;
-    }
-
-    /* alles in 1 kolom */
     .kolommen,
     .kolommenlinks,
     .kolommen3,
@@ -1769,50 +1498,12 @@ body.donker {
         grid-template-columns: 1fr;
     }
 
-    /* 4 kolommen worden er 2 */
     .kolommen4 {
         grid-template-columns: 1fr 1fr;
     }
 
     .balkrij {
         grid-template-columns: 90px 1fr 80px;
-    }
-
-    /* knoppen naast elkaar mogen naar een nieuwe lijn springen */
-    .naastelkaar {
-        flex-wrap: wrap;
-    }
-
-    .grootgetal {
-        font-size: 40px;
-    }
-
-    .foto {
-        height: 150px;
-        line-height: 150px;
-    }
-
-    /* login, registreren, ... */
-    .loginpagina {
-        margin: 24px auto;
-    }
-
-    .loginlogo {
-        height: 90px;
-    }
-
-    /* popup */
-    .popup {
-        padding: 12px;
-    }
-
-    .popupvak {
-        padding: 18px;
-    }
-
-    /* workout pagina (heeft geen menu onderaan) */
-    .workoutpagina {
-        padding-bottom: 0;
     }
 
     .workoutboven,
@@ -1826,18 +1517,7 @@ body.donker {
         line-height: 150px;
     }
 
-    .grootvak {
-        font-size: 32px;
-        height: 70px;
-    }
-
-    .stopknop {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    footer a {
-        display: inline-block;
-        margin: 4px 8px;
+    .workoutpagina {
+        padding-bottom: 0;
     }
 }
