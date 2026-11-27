@@ -4,100 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voeding toevoegen - FitTrack</title>
+    <title>Voortgang - FitTrack</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-    <!-- header -->
     <header>
         <a href="index.html"><img src="img/fittrack-logo.svg" alt="FitTrack logo" class="logo"></a>
-        <nav>
+        <nav aria-label="Hoofdnavigatie">
             <a href="index.html">Home</a>
             <a href="routines.html">Workout</a>
-            <a href="voeding.html" class="actief">Voeding</a>
-            <a href="voortgang.html">Voortgang</a>
+            <a href="voeding.html">Voeding</a>
+            <a href="voortgang.html" class="actief" aria-current="page">Voortgang</a>
             <a href="profiel.html">Profiel</a>
         </nav>
-        <a href="profiel.html" class="profielknop"><i class="fa-solid fa-user"></i></a>
+        <a href="profiel.html" class="profielknop" aria-label="Profiel"><i class="fa-solid fa-user"></i></a>
     </header>
 
     <div class="titel">
-        <h1>Voeding toevoegen</h1>
+        <h1>Jouw voortgang</h1>
+        <p id="today-label"></p>
     </div>
 
-    <div class="inhoud">
-        <form class="kaart" action="voeding.html" method="post" style="max-width: 640px; margin: 0 auto">
-
-            <p class="kopje" style="margin-top: 0">Bij welke maaltijd?</p>
-            <div class="filters">
-                <input type="radio" name="maaltijd" id="ontbijt" value="Ontbijt" class="filterkeuze"><label
-                    for="ontbijt" class="filter">Ontbijt</label>
-                <input type="radio" name="maaltijd" id="lunch" value="Lunch" class="filterkeuze"><label for="lunch"
-                    class="filter">Lunch</label>
-                <input type="radio" name="maaltijd" id="diner" value="Diner" class="filterkeuze"><label for="diner"
-                    class="filter">Diner</label>
-                <input type="radio" name="maaltijd" id="snacks" value="Snacks" class="filterkeuze" checked><label
-                    for="snacks" class="filter">Snacks</label>
+    <main class="inhoud voortgang">
+        <div class="voortgang-toolbar">
+            <div class="periodekeuze" role="group" aria-label="Kies een periode">
+                <button type="button" class="periodeknop" data-period="week" aria-pressed="true">Week</button>
+                <button type="button" class="periodeknop" data-period="month" aria-pressed="false">Maand</button>
+                <button type="button" class="periodeknop" data-period="year" aria-pressed="false">Jaar</button>
             </div>
-            <br>
+            <button type="button" class="knop knopwit" id="export-button">
+                <i class="fa-solid fa-file-arrow-down"></i> Exporteer CSV
+            </button>
+        </div>
 
-            <div class="veld">
-                <label for="zoeketen">Zoek voeding</label>
-                <input type="search" id="zoeketen" name="zoeken" class="zoekbalk" placeholder="Bv. banaan">
-            </div>
+        <p id="progress-message" class="voortgangsmelding" role="status" aria-live="polite">
+            Je ziet voorbeeldgegevens. Nieuwe registraties worden in deze browser bewaard.
+        </p>
 
-            <p class="meldingopgelet" id="scan"><i class="fa-solid fa-barcode"></i> Barcode scannen komt later. Zoek
-                voorlopig op naam.</p>
+        <section class="voortgang-kpis" id="progress-kpis" aria-label="Samenvatting"></section>
 
-            <p class="kopje">Kies je voeding</p>
-            <label class="keuze uiteen" for="eten1">
-                <span><input type="radio" name="eten" id="eten1" value="Havermout">Havermout <span class="kleintekst">·
-                        1 kom (60 g)</span></span>
-                <b>350 kcal</b>
-            </label>
-            <label class="keuze uiteen" for="eten2">
-                <span><input type="radio" name="eten" id="eten2" value="Banaan">Banaan <span class="kleintekst">· 1 stuk
-                        (120 g)</span></span>
-                <b>100 kcal</b>
-            </label>
-            <label class="keuze uiteen" for="eten3">
-                <span><input type="radio" name="eten" id="eten3" value="Kip met rijst">Kip met rijst <span
-                        class="kleintekst">· 1 portie (400 g)</span></span>
-                <b>550 kcal</b>
-            </label>
-            <label class="keuze uiteen" for="eten4">
-                <span><input type="radio" name="eten" id="eten4" value="Griekse yoghurt">Griekse yoghurt <span
-                        class="kleintekst">· 1 bakje (170 g)</span></span>
-                <b>140 kcal</b>
-            </label>
-            <label class="keuze uiteen" for="eten5">
-                <span><input type="radio" name="eten" id="eten5" value="Kwark met noten" checked>Kwark met noten <span
-                        class="kleintekst">· 1 portie (200 g)</span></span>
-                <b>250 kcal</b>
-            </label>
-            <label class="keuze uiteen" for="eten6">
-                <span><input type="radio" name="eten" id="eten6" value="Proteïneshake">Proteïneshake <span
-                        class="kleintekst">· 1 shake (300 ml)</span></span>
-                <b>160 kcal</b>
-            </label>
+        <div class="voortgang-layout">
+            <div class="voortgang-hoofdkolom">
+                <section class="kaart voortgang-kaart">
+                    <div class="kaartkop">
+                        <div>
+                            <h2>Trainingsvolume</h2>
+                            <p class="kleintekst" id="volume-subtitle">Totaal verplaatst gewicht</p>
+                        </div>
+                    </div>
+                    <div id="volume-chart" class="voortgangsgrafiek"></div>
+                </section>
 
-            <div class="veld">
-                <label for="porties">Aantal porties <span class="verplicht">*</span></label>
-                <input type="number" id="porties" name="porties" class="invoer" value="1" min="0.5" step="0.5" required>
+                <section class="kaart voortgang-kaart">
+                    <div class="kaartkop">
+                        <div>
+                            <h2>Lichaamsgewicht</h2>
+                            <p class="kleintekst">Je metingen en doelgewicht</p>
+                        </div>
+                    </div>
+                    <div id="weight-chart" class="voortgangsgrafiek"></div>
+                </section>
+
+                <section class="kaart voortgang-kaart">
+                    <h2>Workoutgeschiedenis</h2>
+                    <p class="kleintekst">Workouts in de gekozen periode</p>
+                    <div id="workout-history"></div>
+                </section>
+
+                <section class="kaart voortgang-kaart">
+                    <h2>Trainingsverdeling</h2>
+                    <p class="kleintekst">Volume per spiergroep in de gekozen periode</p>
+                    <div id="muscle-groups"></div>
+                </section>
             </div>
 
-            <div class="naastelkaar">
-                <a href="voeding.html" class="knop knopwit">Annuleren</a>
-                <button type="submit" class="knop knoprood" style="flex: 1">Toevoegen</button>
-            </div>
-        </form>
-    </div>
+            <aside class="voortgang-zijkolom" aria-label="Voortgang bijwerken">
+                <section class="kaart voortgang-kaart">
+                    <h2>Doelgewicht</h2>
+                    <p class="kleintekst" id="goal-summary"></p>
+                    <div id="goal-display"></div>
+                    <form id="goal-form" class="voortgang-formulier">
+                        <label for="goal-weight">Nieuw doel (kg)</label>
+                        <div class="invoerrij">
+                            <input id="goal-weight" name="goalWeight" type="number" min="20" max="400" step="0.1"
+                                required>
+                            <button class="knop knoprood" type="submit">Opslaan</button>
+                        </div>
+                    </form>
+                </section>
 
-    <!-- footer -->
+                <section class="kaart voortgang-kaart">
+                    <h2>Gewicht registreren</h2>
+                    <form id="weight-form" class="voortgang-formulier">
+                        <label for="weight-value">Gewicht (kg)</label>
+                        <input id="weight-value" name="weight" type="number" min="20" max="400" step="0.1" required>
+                        <label for="weight-date">Datum</label>
+                        <input id="weight-date" name="date" type="date" required>
+                        <button class="knop knoprood breed" type="submit">Meting opslaan</button>
+                    </form>
+                    <div id="weight-history" class="registratiegeschiedenis"></div>
+                </section>
+
+                <section class="kaart voortgang-kaart">
+                    <h2>Workout toevoegen</h2>
+                    <form id="workout-form" class="voortgang-formulier">
+                        <label for="workout-name">Naam</label>
+                        <input id="workout-name" name="name" type="text" maxlength="80"
+                            placeholder="Bijv. Bovenlichaam kracht" required>
+                        <label for="workout-date">Datum</label>
+                        <input id="workout-date" name="date" type="date" required>
+                        <div class="invoerrij">
+                            <div>
+                                <label for="workout-duration">Duur (min)</label>
+                                <input id="workout-duration" name="duration" type="number" min="1" max="600" step="1"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="workout-volume">Volume (kg)</label>
+                                <input id="workout-volume" name="volume" type="number" min="0" max="1000000" step="1"
+                                    required>
+                            </div>
+                        </div>
+                        <label for="workout-muscle">Spiergroep</label>
+                        <select id="workout-muscle" name="muscle" required>
+                            <option value="Borst">Borst</option>
+                            <option value="Rug">Rug</option>
+                            <option value="Benen">Benen</option>
+                            <option value="Schouders">Schouders</option>
+                            <option value="Armen">Armen</option>
+                            <option value="Full body">Full body</option>
+                        </select>
+                        <button class="knop knoprood breed" type="submit">Workout opslaan</button>
+                    </form>
+                </section>
+            </aside>
+        </div>
+    </main>
+
     <footer>
         <p>© 2026 FitTrack</p>
         <a href="privacy.html">Privacy</a>
@@ -105,17 +151,16 @@
         <a href="admin.html">Admin</a>
     </footer>
 
-    <!-- menu onderaan voor gsm -->
-    <div class="menuonder">
+    <nav class="menuonder" aria-label="Mobiele navigatie">
         <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
         <a href="routines.html"><i class="fa-solid fa-dumbbell"></i>Workout</a>
-        <a href="voeding.html" class="actief"><i class="fa-solid fa-utensils"></i>Voeding</a>
-        <a href="voortgang.html"><i class="fa-solid fa-chart-line"></i>Voortgang</a>
+        <a href="voeding.html"><i class="fa-solid fa-utensils"></i>Voeding</a>
+        <a href="voortgang.html" class="actief" aria-current="page"><i
+                class="fa-solid fa-chart-line"></i>Voortgang</a>
         <a href="profiel.html"><i class="fa-solid fa-user"></i>Profiel</a>
-    </div>
+    </nav>
 
     <script src="js/script.js"></script>
-
 </body>
 
 </html>

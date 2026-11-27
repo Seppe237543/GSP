@@ -1521,3 +1521,370 @@ body.donker {
         padding-bottom: 0;
     }
 }
+
+/* ===== voortgang ===== */
+.voortgang {
+    max-width: 1180px;
+}
+
+.voortgang-toolbar,
+.kaartkop,
+.invoerrij {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.voortgang-toolbar {
+    margin-bottom: 14px;
+}
+
+.periodekeuze {
+    display: flex;
+    gap: 6px;
+    padding: 5px;
+    background: white;
+    border: 2px solid #D7E6E0;
+    border-radius: 14px;
+}
+
+.periodeknop {
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: #5F6F71;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    min-width: 78px;
+    padding: 9px 14px;
+}
+
+.periodeknop[aria-pressed="true"] {
+    background: #3D7A6A;
+    color: white;
+}
+
+.periodeknop:focus-visible,
+.voortgang button:focus-visible,
+.voortgang input:focus-visible,
+.voortgang select:focus-visible {
+    outline: 3px solid #519E8A;
+    outline-offset: 2px;
+}
+
+.voortgangsmelding {
+    color: #5F6F71;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.voortgangsmelding.fout {
+    color: #A51C30;
+    font-weight: 700;
+}
+
+.voortgang-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.voortgang-kpi {
+    background: white;
+    border: 2px solid #D7E6E0;
+    border-radius: 16px;
+    min-width: 0;
+    padding: 16px;
+}
+
+.voortgang-kpi-label {
+    color: #5F6F71;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.voortgang-kpi strong {
+    color: #041F1E;
+    display: block;
+    font-size: 25px;
+    line-height: 1.3;
+    margin: 4px 0;
+    overflow-wrap: anywhere;
+}
+
+.voortgang-kpi small {
+    color: #5F6F71;
+    display: block;
+    font-size: 12px;
+}
+
+.voortgang-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(290px, 1fr);
+    align-items: start;
+    gap: 20px;
+}
+
+.voortgang-hoofdkolom,
+.voortgang-zijkolom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+}
+
+.voortgang-kaart h2 {
+    margin-bottom: 2px;
+}
+
+.voortgang-kaart > .kleintekst {
+    margin-bottom: 12px;
+}
+
+.voortgang-formulier {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 14px;
+}
+
+.voortgang-formulier label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.voortgang-formulier input,
+.voortgang-formulier select {
+    background: white;
+    border: 1px solid #AFC7BF;
+    border-radius: 9px;
+    color: #1E2D2F;
+    font: inherit;
+    min-height: 44px;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+.voortgang-formulier .invoerrij {
+    align-items: end;
+}
+
+.voortgang-formulier .invoerrij > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.voortgang-formulier .invoerrij > div label {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.voortgang-formulier .knop {
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.voortgang-formulier .breed {
+    margin-top: 5px;
+}
+
+.voortgangsgrafiek {
+    min-height: 200px;
+    width: 100%;
+}
+
+.voortgangsgrafiek svg {
+    display: block;
+    height: auto;
+    overflow: visible;
+    width: 100%;
+}
+
+.voortgangsgrafiek text {
+    fill: #5F6F71;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+}
+
+.grafiek-leeg,
+.geschiedenis-leeg {
+    color: #5F6F71;
+    font-size: 14px;
+    padding: 24px 8px;
+    text-align: center;
+}
+
+.geschiedenisrij {
+    align-items: center;
+    border-top: 1px solid #E8F0ED;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.geschiedenisrij:first-child {
+    border-top: 0;
+}
+
+.registratiekop {
+    font-size: 15px;
+    margin-top: 18px;
+}
+
+.geschiedenisinfo {
+    min-width: 0;
+}
+
+.geschiedenisinfo strong,
+.geschiedenisinfo span {
+    display: block;
+}
+
+.geschiedenisinfo strong {
+    overflow-wrap: anywhere;
+}
+
+.geschiedenisinfo span {
+    color: #5F6F71;
+    font-size: 13px;
+}
+
+.geschiedeniswaarde {
+    flex: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.verwijderregistratie {
+    background: transparent;
+    border: 0;
+    color: #A51C30;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    margin-left: 6px;
+    text-decoration: underline;
+}
+
+.spiergroep {
+    align-items: center;
+    display: grid;
+    font-size: 14px;
+    gap: 10px;
+    grid-template-columns: 90px minmax(40px, 1fr) 42px;
+    margin-top: 13px;
+}
+
+.spiergroep-balk {
+    background: #E3EEEA;
+    border-radius: 99px;
+    height: 9px;
+    overflow: hidden;
+}
+
+.spiergroep-balk span {
+    background: #519E8A;
+    border-radius: inherit;
+    display: block;
+    height: 100%;
+}
+
+.spiergroep-percentage {
+    color: #5F6F71;
+    text-align: right;
+}
+
+.doelstatus {
+    background: #E3EEEA;
+    border-radius: 12px;
+    margin-top: 12px;
+    padding: 12px;
+}
+
+.doelstatus strong {
+    color: #041F1E;
+    display: block;
+    font-size: 19px;
+}
+
+.doelbalk {
+    background: #D7E6E0;
+    border-radius: 99px;
+    height: 9px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.doelbalk span {
+    background: #519E8A;
+    display: block;
+    height: 100%;
+}
+
+@media (max-width: 850px) {
+    .voortgang-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .voortgang-zijkolom {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .voortgang-zijkolom > :last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 650px) {
+    .voortgang {
+        padding: 18px 14px;
+    }
+
+    .voortgang-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .periodekeuze {
+        justify-content: space-between;
+    }
+
+    .periodeknop {
+        flex: 1;
+        min-width: 0;
+        padding: 9px 8px;
+    }
+
+    .voortgang-toolbar > .knop {
+        justify-content: center;
+    }
+
+    .voortgang-kpis {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .voortgang-kpi {
+        padding: 12px;
+    }
+
+    .voortgang-kpi strong {
+        font-size: 21px;
+    }
+
+    .voortgang-zijkolom {
+        display: flex;
+    }
+
+    .voortgangsgrafiek {
+        min-height: 150px;
+    }
+}
